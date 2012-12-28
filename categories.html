@@ -1,0 +1,23 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+
+<div>
+{% for cat in site.categories %}
+	<a href="#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }} ({{ cat[1]size }})</a>
+{% endfor %}
+</div>
+
+<ul>
+{% for cat in site.categories %}
+	<li id="{{ cat[0] }}">{{ cat[0] }}</li>
+	{% for post in cat[1] %}
+		<li>
+			<time datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
+			<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+		</li>
+	{% endfor %}
+{% endfor %}
+</ul>

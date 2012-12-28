@@ -1,0 +1,6 @@
+permalink: /:year/:month/:day/:title
+url: http://cone.cc
+title: cone.cc
+pygments: true
+paginate: 3
+author: cone

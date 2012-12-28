@@ -1,0 +1,23 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<div>
+{% for tag in site.tags %}
+	<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+{% endfor %}
+</div>
+
+<ul>
+{% for tag in site.tags %}
+	<li id="{{ tag[0] }}">{{ tag[0] }}</li>
+	{% for post in tag[1] %}
+		<li>
+			<time datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
+			<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+		</li>
+	{% endfor %}
+{% endfor %}
+</ul>

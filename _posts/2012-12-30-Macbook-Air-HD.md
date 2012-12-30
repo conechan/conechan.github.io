@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Macbook Air的移动硬盘方案
-description: 话说乞丐版的13寸Macbook Air只有128GB的SSD，如果要配256GB的SSD，要加差不多一台ipad mini的钱，这显然是不符合屌丝的价值观的。而且Air又不像Pro那样可以潇洒地拆光驱装硬盘，所以要扩展存储只能通过移动硬盘，或者网络存储。
+title: MacBook Air的移动硬盘方案
+description: 话说乞丐版的13寸MacBook Air只有128GB的SSD，如果要配256GB的SSD，要加差不多一台ipad mini的钱，这显然是不符合屌丝的价值观的。而且Air又不像Pro那样可以潇洒地拆光驱装硬盘，所以要扩展存储只能通过移动硬盘，或者网络存储。
 categories: Mac
-tags: Macbook Air, OSX
+tags: MacBookAir OSX
 ---
-话说乞丐版的13寸Macbook Air只有128GB的SSD，如果要配256GB的SSD，要加差不多一台ipad mini的钱，这显然是不符合屌丝的价值观的。而且Air又不像Pro那样可以潇洒地拆光驱装硬盘，所以要扩展存储只能通过移动硬盘，或者网络存储。
+话说乞丐版的13寸MacBook Air只有128GB的SSD，如果要配256GB的SSD，要加差不多一台ipad mini的钱，这显然是不符合屌丝的价值观的。而且Air又不像Pro那样可以潇洒地拆光驱装硬盘，所以要扩展存储只能通过移动硬盘，或者网络存储。
 
 而网络存储又有点高端（NAS买不起呀），而且依赖网络（在小水管网络下云存储只是浮云），所以一般人还是会使用移动硬盘作为首选的外部存储设备。
 

@@ -1,7 +1,7 @@
 permalink: /:year/:month/:day/:title
 url: http://cone.cc
 title: cone.cc
-description: Toooo simple
+description: 就这么点能耐，么？
 pygments: true
 paginate: 3
 author: cone

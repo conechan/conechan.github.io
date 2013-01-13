@@ -1,27 +1,48 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<title>{{ page.title }} | {{site.title }}</title>
-</head>
-<body>
-	<header>
-		<h1>{{ site.title }}</h1>
-	</header>
-	<nav>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/categories/">Categories</a></li>
-			<li><a href="/tags/">Tags</a></li>
-			<li><a href="/archive/">Archive</a></li>
-			<li><a href="/about/">About</a></li>
-		</ul>
-	</nav>
-	<div>
-		{{ content }}
-	</div>
-	<footer>
-		<p>balabala...</p>
-	</footer>
-</body>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>{{ page.title }} | {{site.title }}</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/css/style.css">
+		<script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+
+	<body>
+		<!-- <div id="line"></div> -->
+		<header id="site-header">
+			<div id="site-banner">
+				<h1><a href="/">{{ site.title }}</a></h1>
+				<small>{{ site.description }}</small>
+			</div>
+			<nav id="site-nav">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/categories/">Categories</a></li>
+					<li><a href="/tags/">Tags</a></li>
+					<li><a href="/archive/">Archive</a></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="site-content">
+			{{ content }}
+		</div>
+
+		<footer id="site-footer">
+			<hr>
+			<div class="site-info">
+				<p>© <a href="http://cone.cc/">cone.cc</a>. Powered by <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://pages.github.com">Github</a>. Theme by <a href="http://fimply.de/">elegantWhite</a>.</p>
+			</div>
+		</footer>
+	</body>
 </html>

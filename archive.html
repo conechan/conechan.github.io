@@ -9,7 +9,7 @@ permalink: /archive/
 		{% capture y %}{{ post.date | date: '%Y' }}{% endcapture %}
 		{% if year != y %}
 			{% assign year = y %}
-			<li>{{ y }}</li>
+			<h2>{{ y }}</h2>
 		{% endif %}
 		<li>
 			<time datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>

@@ -1,7 +1,8 @@
 permalink: /:year/:month/:day/:title
 url: http://cone.cc
 title: cone.cc
-description: 就这么点能耐，么？
+description: 你～叫我做奇葩～吧～
 pygments: true
 paginate: 3
 author: cone
+markdown: rdiscount

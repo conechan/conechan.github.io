@@ -3,57 +3,31 @@ title: Home
 layout: default
 permalink: /
 ---
+<div id="post-list">
+	{% for post in paginator.posts %}
+	<article class="post">
+		<header class="post">
+			<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+			<small><time>{{ post.date | date_to_string }}</time></small>
+		</header>
 
-{% for post in paginator.posts %}
-<article>
-	<header>
-		<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-		<small>{{ post.date | date_to_string }}</small>
-	</header>
+		<div class="entry">
+			<p>{{ post.description }}</p>
+			<small><a href="{{ post.url }}">read more</a></small>
+		</div>
+	</article>
+	{% endfor %}
+</div>
 
-	<section>
-		<p>
-			{{ post.description }}
-		</p>
-		<p>
-			<a href="{{ post.url }}">阅读全文&rarr;</a>
-		</p>
-	</section>
-
-	<footer>
-		<ul>
-			<li>Category:</li>
-			{% for cat in post.categories %}
-			<li><a href="/categories/#{{ cat }}">{{ cat }}</a></li>
-			{% endfor %}
-		</ul>
-		<ul>
-			<li>Tags:</li>
-			{% for tag in post.tags %}
-			<li><a href="/tags/#{{ tag }}">{{ tag }}</a></li>
-			{% endfor %}
-		</ul>
-	</footer>
-</article>
-{% endfor %}
-
-<div>
-	<ul>
-		{% if paginator.previous_page %}
-			{% if paginator.previous_page == 1 %}
-			<li>
-				<a href="/">&larr; 上一页</a>
-			</li>
-			{% else %}
-			<li>
-				<a href="/page{{ paginator.previous_page }}">&larr; 上一页</a>
-			</li>
-			{% endif %}
+<div id="site-paginator">
+	{% if paginator.previous_page %}
+		{% if paginator.previous_page == 1 %}
+			<a href="/">&larr; 上一页</a>
+		{% else %}
+			<a href="/page{{ paginator.previous_page }}">&larr; 上一页</a>
 		{% endif %}
-		{% if paginator.next_page %}
-		<li>
-			<a href="/page{{ paginator.next_page }}">下一页 &rarr;</a>
-		</li>
-		{% endif %}
-	</ul>
+	{% endif %}
+	{% if paginator.next_page %}
+		<a href="/page{{ paginator.next_page }}">下一页 &rarr;</a>
+	{% endif %}
 </div>

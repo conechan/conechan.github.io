@@ -10,43 +10,39 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="/css/main.css">
 		<link rel="stylesheet" href="/css/style.css">
 		<script src="/js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
+
 	<body>
-	<div class="hfeed site">
-		<header class="site-header" role="banner">
-			<hgroup>
-				<h1 class="site-title">
-					<a rel="home" title="{{ site.title }}" href="/">{{ site.title }}</a>
-				</h1>
-				<h2 class="site-description">{{ site.description }}</h2>
-			</hgroup>
-			<nav class="main-navigation" role="navigation">
-				<a class="assistive-text" title="Skip to content" href="#content">Skip to content</a>
-				<div class="nav-menu">
-					<ul>
-						<li class="page_item"><a href="/">Home</a></li>
-						<li class="page_item"><a href="/categories/">Categories</a></li>
-						<li class="page_item"><a href="/tags/">Tags</a></li>
-						<li class="page_item"><a href="/archive/">Archive</a></li>
-						<li class="page_item"><a href="/about/">About</a></li>
-					</ul>
-				</div>
+		<!-- <div id="line"></div> -->
+		<header id="site-header">
+			<div id="site-banner">
+				<h1><a href="/">{{ site.title }}</a></h1>
+				<small>{{ site.description }}</small>
+			</div>
+			<nav id="site-nav">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/categories/">Categories</a></li>
+					<li><a href="/tags/">Tags</a></li>
+					<li><a href="/archive/">Archive</a></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
 			</nav>
 		</header>
-		<div id="main" class="wrapper">
-			<div id="primary" class="site-content">
-				<div id="content" role="main">
-					{{ content }}
-				</div>
-			</div>
+
+		<div id="site-content">
+			{{ content }}
 		</div>
-		<footer id="colophon" role="contentinfo">
+
+		<footer id="site-footer">
+			<hr>
 			<div class="site-info">
-				<a href="/">http://cone.cc</a>
+				<p>© <a href="http://cone.cc/">cone.cc</a>. Powered by <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://pages.github.com">Github</a>. Theme by <a href="http://fimply.de/">elegantWhite</a>.</p>
 			</div>
 		</footer>
-	</div>
 	</body>
 </html>

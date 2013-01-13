@@ -12,7 +12,7 @@ permalink: /tags/
 
 <ul>
 {% for tag in site.tags %}
-	<li id="{{ tag[0] }}">{{ tag[0] }}</li>
+	<h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
 	{% for post in tag[1] %}
 		<li>
 			<time datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>

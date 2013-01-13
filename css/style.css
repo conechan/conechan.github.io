@@ -1,0 +1,278 @@
+/*
+Project: cone.cc Webblog CSS
+Description: Theme design by Fimply.de, reconstructed by cone.
+Author: cone
+Email: conechan@gmail.com
+
+Based on HTML5 Boilerplate and normalize.css.
+*/
+
+/*
+#0092e0
+#0092e0
+*/
+
+/* @site-general
+-------------------------------------------------------------- */
+
+body {
+	font-size: 16px;
+	font-weight: 300;
+	font-family: Arial, sans-serif;
+	line-height: 30px;
+	color: #515151;
+}
+
+
+/* @site-header
+-------------------------------------------------------------- */
+
+#site-header {
+	width: 960px;
+	margin: 0px auto;
+	padding: 30px 50px;
+}
+
+#site-banner {
+	text-align: left;
+}
+
+#site-banner h1 {
+	margin: 0px;
+}
+
+#site-banner h1 a {
+	font-size: 36px;
+	/*font-size: 2.812rem;*/
+	/*font-family: 'Nunito','Helvetica Neue',Helvetica,Arial,Sans-serif;*/
+	letter-spacing: 5px;
+	font-weight: 500;
+	text-decoration: none;
+	color: #0092e0;
+}
+
+#site-banner h1 a:hover {
+	font-size: 36px;
+	/*font-size: 2.812rem;*/
+	/*font-family: 'Nunito','Helvetica Neue',Helvetica,Arial,Sans-serif;*/
+	letter-spacing: 5px;
+	font-weight: 500;
+	text-decoration: none;
+	color: #005f92;
+}
+
+#site-banner small {
+	/*font-family: 'Helvetica Neue',Helvetica,Arial,Sans-serif;*/
+	font-size: 14px;
+	font-style: italic;
+	/*font-size: 1.187rem;*/
+	margin:8px 0 0 0;
+	text-align: left;
+	display: block;
+	/*width:800px;*/
+	word-break: break-word;
+	letter-spacing: .07em;
+	/*font-weight: 100;*/
+	color:#bababa;
+}
+
+#site-nav {
+	background-color: #fff;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	width: 960px;
+	margin-top: 20px;
+	display: block;
+}
+
+#site-nav ul {
+	display: block;
+	padding-left: 0px;
+	margin: 0px;
+}
+
+#site-nav li {
+	margin: 20px 5px 20px 0px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	/*font-family: 'Nunito','Helvetica Neue',Helvetica,Arial,Sans-serif;*/
+	background: #f7f7f7;
+}
+
+#site-nav li:hover {
+	background: #e9e9e9;
+}
+
+#site-nav a {
+	display: block;
+	margin: 0px;
+  line-height: 3.333em;
+	padding: 0 1.2125em;
+	text-decoration: none;
+	color: #69686a;
+}
+
+/* @site-content
+-------------------------------------------------------------- */
+
+#site-content {
+	width: 960px;
+	margin: 0px auto;
+	padding: 0px 50px;
+}
+
+article.post {
+	border-bottom: 1px solid #eee;
+	margin: 0px auto;
+	text-align: left;
+}
+
+article.post header h2 {
+	color: #515151;
+	margin: 0px 0px 16px 0px;
+	font-size: 36px;
+}
+
+article.post header small {
+	margin: 16px 0px 16px 1px;
+	color: #b4b4b4;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+article.post header small.post-category {
+	border-left: 1px solid #eee;
+	padding-left: 5px;
+	margin: 16px 0px 16px 1px;
+	color: #cfcfcf;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+article.post header small.post-category a {
+	color: #f2006a;
+	text-decoration: none;
+	border-bottom: 1px dotted;
+}
+
+article.post header small.post-category a:hover {
+	color: #9d0045;
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+article.post small.post-tag {
+	color: #cfcfcf;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+article.post small.post-tag a {
+	color: #f2006a;
+	text-decoration: none;
+	border-bottom: 1px dotted;
+}
+
+article.post small.post-tag a:hover {
+	color: #9d0045;
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+article.post div.post-meta {
+	margin: 15px auto;
+	padding: 15px 0px;
+	border-top: 1px dotted #eee;
+	border-bottom: 1px dotted #eee;
+}
+
+article.post a{
+	color: #0092e0;
+	text-decoration: none;
+}
+
+div.post-entry p {
+	margin: 16px 0px;
+	color: #515151;
+	font-size: 16px;
+	font-weight: 300;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 30px;
+}
+
+div.page-navigator {
+	zoom: 1;
+}
+
+div.page-navigator:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+div.page-navigator span {
+	margin: 20px 0px;
+	text-align: center;
+	/*display: inline-block;*/
+	font-size: 16px;
+	background: #f7f7f7;
+}
+
+div.page-navigator span:hover {
+	background: #e9e9e9;
+}
+
+div.page-navigator span a {
+	display: block;
+	margin: 0px;
+  line-height: 3.333em;
+	padding: 0 1.2125em;
+	text-decoration: none;
+	color: #69686a;
+}
+
+div.page-navigator span.prev {
+	float: left;
+}
+
+div.page-navigator span.next {
+	float: right;
+}
+
+/* @site-footer
+-------------------------------------------------------------- */
+
+#site-footer {
+	margin: 0px auto;
+	width: 960px;
+	padding: 0px 50px;
+}
+
+#site-footer hr {
+	border-color: #eee;
+	margin: 0px;
+}
+
+div.site-info {
+	margin: 30px auto;
+	text-align: left;
+}
+
+div.site-info p {
+	font-size: 14px;
+	color: #5f5f5f;
+}
+
+div.site-info a {
+	color: #0092e0;
+	text-decoration: none;
+	border-bottom: 1px dotted;
+}
+
+div.site-info a:hover {
+	color: #005f92;
+	border-bottom: 1px solid;
+}

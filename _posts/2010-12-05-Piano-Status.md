@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2012年琴况
+title: 2010年琴况
 description: 2010马上就over了，也系时候冒个泡写写琴况。这里荒废太久了，连学琴2周年都没有发文纪念先。
 categories: Life
 tags: Piano

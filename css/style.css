@@ -30,7 +30,7 @@ body {
 #site-header {
 	width: 960px;
 	margin: 0px auto;
-	padding: 30px 50px;
+	padding: 30px 50px 10px 50px;
 }
 
 #site-banner {
@@ -81,7 +81,7 @@ body {
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 	width: 960px;
-	margin-top: 20px;
+	margin-top: 15px;
 	display: block;
 }
 
@@ -126,6 +126,7 @@ article.post {
 	border-bottom: 1px solid #eee;
 	margin: 0px auto;
 	text-align: left;
+	padding-top: 20px;
 }
 
 article.post header h2 {
@@ -135,7 +136,7 @@ article.post header h2 {
 }
 
 article.post header small {
-	margin: 16px 0px 16px 1px;
+	margin: 16px 0px 16px 2px;
 	color: #b4b4b4;
 	font-size: 14px;
 	letter-spacing: 1px;
@@ -192,8 +193,8 @@ article.post a{
 	text-decoration: none;
 }
 
-div.post-entry p {
-	margin: 16px 0px;
+article.post div.post-entry p {
+	margin: 16px 0px 16px 0px;
 	color: #515151;
 	font-size: 16px;
 	font-weight: 300;
@@ -202,7 +203,7 @@ div.post-entry p {
 }
 
 div.page-navigator {
-	zoom: 1;
+	margin: 0px;
 }
 
 div.page-navigator:after {
@@ -241,6 +242,65 @@ div.page-navigator span.prev {
 div.page-navigator span.next {
 	float: right;
 }
+
+/* @site-list
+-------------------------------------------------------------- */
+#post-list article {
+	border-bottom: 1px dotted #eee;
+	padding: 15px 0px 15px 0px;
+	text-align: left;
+}
+
+#post-list article header h2 {
+	color: #515151;
+	margin: 0px 0px 5px 0px;
+	font-size: 24px;
+}
+
+#post-list article header h2 a {
+	color: #0092e0;
+	text-decoration: none;
+}
+
+#post-list article header h2 a:hover {
+	color: #005f92;
+}
+
+#post-list article header small {
+	margin: 5px 0px 5px 2px;
+	color: #b4b4b4;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+#post-list article div.entry p {
+	margin: 5px 0px 16px 0px;
+	color: #515151;
+	font-size: 16px;
+	font-weight: 300;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 30px;
+}
+
+#post-list article div.entry small {
+	margin: 5px 0px 5px 2px;
+	color: #cfcfcf;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+#post-list article div.entry a {
+	color: #f2006a;
+	text-decoration: none;
+	border-bottom: 1px dotted;
+}
+
+#post-list article div.entry a:hover {
+	color: #9d0045;
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
 
 /* @site-footer
 -------------------------------------------------------------- */

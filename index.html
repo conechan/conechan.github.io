@@ -5,29 +5,32 @@ permalink: /
 ---
 <div id="post-list">
 	{% for post in paginator.posts %}
-	<article class="post">
-		<header class="post">
+	<article>
+		<header>
 			<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-			<small><time>{{ post.date | date_to_string }}</time></small>
+			<small>{{ post.date | date: "%B %d, %Y" }}</small>
 		</header>
-
 		<div class="entry">
 			<p>{{ post.description }}</p>
-			<small><a href="{{ post.url }}">read more</a></small>
+			<small><a href="{{ post.url }}">Read more</a></small>
 		</div>
 	</article>
 	{% endfor %}
 </div>
 
-<div id="site-paginator">
+<div class="page-navigator">
 	{% if paginator.previous_page %}
+	<span class="next">
 		{% if paginator.previous_page == 1 %}
-			<a href="/">&larr; 上一页</a>
+		<a href="/">Newer &rarr;</a>
 		{% else %}
-			<a href="/page{{ paginator.previous_page }}">&larr; 上一页</a>
+		<a href="/page{{ paginator.previous_page }}">Newer &rarr;</a>
 		{% endif %}
+	</span>
 	{% endif %}
 	{% if paginator.next_page %}
-		<a href="/page{{ paginator.next_page }}">下一页 &rarr;</a>
+	<span class="prev">
+		<a href="/page{{ paginator.next_page }}">&larr; Older</a>
+	</span>
 	{% endif %}
 </div>

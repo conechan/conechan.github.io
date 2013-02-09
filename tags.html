@@ -1,21 +1,19 @@
 ---
-layout: default
+layout: page
 title: Tags
 permalink: /tags/
 ---
-
 <div>
 {% for tag in site.tags %}
 	<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
 {% endfor %}
 </div>
-
 <ul>
 {% for tag in site.tags %}
 	<h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
 	{% for post in tag[1] %}
 		<li>
-			<time datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
+			<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y年%m月%d日" }}</time>
 			<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 		</li>
 	{% endfor %}

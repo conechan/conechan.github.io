@@ -17,20 +17,31 @@ Based on HTML5 Boilerplate and normalize.css.
 
 body {
 	font-size: 16px;
-	font-weight: 300;
-	font-family: Arial, sans-serif;
-	line-height: 30px;
-	color: #515151;
+	font-weight: normal;
+	font-family: 'PT Serif', Arial, sans-serif;
+	line-height: 24px;
+	color: #5f5f5f;
 }
 
+a:link, a:visited {
+	color: #0092e0;
+}
+
+a:hover, a:focus, a:active {
+	color: #005f92;
+}
+
+a {
+	text-decoration: none;
+}
 
 /* @site-header
 -------------------------------------------------------------- */
 
 #site-header {
-	width: 960px;
+	width: 576px;
 	margin: 0px auto;
-	padding: 30px 50px 10px 50px;
+	padding: 30px 0px 0px 0px;
 }
 
 #site-banner {
@@ -39,48 +50,16 @@ body {
 
 #site-banner h1 {
 	margin: 0px;
-}
-
-#site-banner h1 a {
 	font-size: 36px;
-	/*font-size: 2.812rem;*/
-	/*font-family: 'Nunito','Helvetica Neue',Helvetica,Arial,Sans-serif;*/
 	letter-spacing: 5px;
 	font-weight: 500;
-	text-decoration: none;
-	color: #0092e0;
-}
-
-#site-banner h1 a:hover {
-	font-size: 36px;
-	/*font-size: 2.812rem;*/
-	/*font-family: 'Nunito','Helvetica Neue',Helvetica,Arial,Sans-serif;*/
-	letter-spacing: 5px;
-	font-weight: 500;
-	text-decoration: none;
-	color: #005f92;
-}
-
-#site-banner small {
-	/*font-family: 'Helvetica Neue',Helvetica,Arial,Sans-serif;*/
-	font-size: 14px;
-	font-style: italic;
-	/*font-size: 1.187rem;*/
-	margin:8px 0 0 0;
-	text-align: left;
-	display: block;
-	/*width:800px;*/
-	word-break: break-word;
-	letter-spacing: .07em;
-	/*font-weight: 100;*/
-	color:#bababa;
 }
 
 #site-nav {
 	background-color: #fff;
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
-	width: 960px;
+	width: 576px;
 	margin-top: 15px;
 	display: block;
 }
@@ -117,9 +96,9 @@ body {
 -------------------------------------------------------------- */
 
 #site-content {
-	width: 960px;
+	width: 576px;
 	margin: 0px auto;
-	padding: 0px 50px;
+	padding: 0px;
 }
 
 article.post {
@@ -132,7 +111,8 @@ article.post {
 article.post header h2 {
 	color: #515151;
 	margin: 0px 0px 16px 0px;
-	font-size: 36px;
+	font-size: 30px;
+	font-weight: normal;
 }
 
 article.post header small {
@@ -197,9 +177,8 @@ article.post div.post-entry p {
 	margin: 16px 0px 16px 0px;
 	color: #515151;
 	font-size: 16px;
-	font-weight: 300;
+	font-weight: normal;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	line-height: 30px;
 }
 
 div.page-navigator {
@@ -307,32 +286,28 @@ div.page-navigator span.next {
 
 #site-footer {
 	margin: 0px auto;
-	width: 960px;
+	width: 576px;
 	padding: 0px 50px;
 }
 
-#site-footer hr {
-	border-color: #eee;
-	margin: 0px;
-}
-
-div.site-info {
-	margin: 30px auto;
+#site-info {
+	padding: 20px 0px;
 	text-align: left;
+	border-top: 1px solid #eee;
 }
 
-div.site-info p {
+#site-info p {
+	margin: 0px;
 	font-size: 14px;
-	color: #5f5f5f;
 }
 
-div.site-info a {
-	color: #0092e0;
-	text-decoration: none;
+#site-info a:link,
+div.stie-info a:visited {
 	border-bottom: 1px dotted;
 }
 
-div.site-info a:hover {
-	color: #005f92;
+#site-info a:hover,
+#site-info a:focus,
+#site-info a:active {
 	border-bottom: 1px solid;
 }

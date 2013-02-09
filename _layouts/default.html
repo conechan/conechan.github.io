@@ -17,32 +17,32 @@
 	</head>
 
 	<body>
-		<!-- <div id="line"></div> -->
+		<!-- site header start -->
 		<header id="site-header">
 			<div id="site-banner">
 				<h1><a href="/">{{ site.title }}</a></h1>
-				<small>{{ site.description }}</small>
 			</div>
 			<nav id="site-nav">
 				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/categories/">Categories</a></li>
-					<li><a href="/tags/">Tags</a></li>
-					<li><a href="/archive/">Archive</a></li>
-					<li><a href="/about/">About</a></li>
+					<li><a href="/about/">ABOUT</a></li>
+					<li><a href="/categories/">CAT</a></li>
+					<li><a href="/tags/">TAG</a></li>
+					<li><a href="/archive/">ARC</a></li>
 				</ul>
 			</nav>
 		</header>
-
+		<!-- site header end -->
+		<!-- site content start -->
 		<div id="site-content">
 			{{ content }}
 		</div>
-
+		<!-- site content end -->
+		<!-- site footer start -->
 		<footer id="site-footer">
-			<hr>
-			<div class="site-info">
-				<p>© <a href="http://cone.cc/">cone.cc</a>. Powered by <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://pages.github.com">Github</a>. Theme by <a href="http://fimply.de/">elegantWhite</a>.</p>
+			<div id="site-info">
+				<p>© <a href="http://cone.cc/">cone.cc</a>. Powered by <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://pages.github.com">Github</a>.</p>
 			</div>
+			<!--
 			<script type="text/javascript">
 			  var _gaq = _gaq || [];
 			  _gaq.push(['_setAccount', 'UA-37713806-1']);
@@ -54,6 +54,8 @@
 			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			  })();
 			</script>
+			-->
 		</footer>
+		<!-- site footer end -->
 	</body>
 </html>

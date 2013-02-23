@@ -2,6 +2,6 @@ permalink: /:year/:month/:day/:title
 url: http://cone.cc
 title: cone.cc
 pygments: true
-paginate: 3
+paginate: 5
 author: cone
 markdown: rdiscount

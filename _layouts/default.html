@@ -17,26 +17,27 @@
 	</head>
 
 	<body>
-		<!-- site header start -->
-		<header id="site-header">
-			<div id="site-banner">
-				<h1><a href="/">{{ site.title }}</a></h1>
+		<div id="site-wrapper">
+			<!-- site header start -->
+			<header id="site-header">
+				<div id="site-banner">
+					<h1><a href="/">{{ site.title }}</a></h1>
+				</div>
+				<nav id="site-nav">
+					<ul>
+						<li><a href="/archive/">archive</a></li>
+						<li><a href="/categories/">categories</a></li>
+						<li><a href="/about/">about</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!-- site header end -->
+			<!-- site content start -->
+			<div id="site-content">
+				{{ content }}
 			</div>
-			<nav id="site-nav">
-				<ul>
-					<li><a href="/about/">ABOUT</a></li>
-					<li><a href="/categories/">CAT</a></li>
-					<li><a href="/tags/">TAG</a></li>
-					<li><a href="/archive/">ARC</a></li>
-				</ul>
-			</nav>
-		</header>
-		<!-- site header end -->
-		<!-- site content start -->
-		<div id="site-content">
-			{{ content }}
+			<!-- site content end -->
 		</div>
-		<!-- site content end -->
 		<!-- site footer start -->
 		<footer id="site-footer">
 			<div id="site-info">

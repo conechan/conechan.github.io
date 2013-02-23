@@ -1,6 +1,6 @@
 /*
 Project: cone.cc Webblog CSS
-Description: Theme design by Fimply.de, reconstructed by cone.
+Description: Simple css style.
 Author: cone
 Email: conechan@gmail.com
 
@@ -16,87 +16,117 @@ Based on HTML5 Boilerplate and normalize.css.
 -------------------------------------------------------------- */
 
 body {
+	background-color: #fff;
 	font-size: 16px;
 	font-weight: normal;
-	font-family: 'PT Serif', Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	line-height: 24px;
 	color: #5f5f5f;
 }
 
 a:link, a:visited {
 	color: #0092e0;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
 }
 
 a:hover, a:focus, a:active {
 	color: #005f92;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
 }
 
 a {
 	text-decoration: none;
 }
 
+.page-title {
+	color: #515151;
+	margin: 0px;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+/* @site-wrapper
+-------------------------------------------------------------- */
+
+#site-wrapper {
+	margin: 30px auto;
+	width: 690px;
+	padding: 30px;
+}
+
 /* @site-header
 -------------------------------------------------------------- */
 
 #site-header {
-	width: 576px;
 	margin: 0px auto;
-	padding: 30px 0px 0px 0px;
+	padding: 0px 0px 20px 0px;
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
 }
 
 #site-banner {
 	text-align: left;
+	float: left;
 }
 
 #site-banner h1 {
 	margin: 0px;
-	font-size: 36px;
+	font-size: 50px;
 	letter-spacing: 5px;
-	font-weight: 500;
+	font-weight: bold;
+	line-height: 48px;
 }
 
 #site-nav {
-	background-color: #fff;
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-	width: 576px;
-	margin-top: 15px;
-	display: block;
+	float: right;
 }
 
 #site-nav ul {
 	display: block;
-	padding-left: 0px;
+	padding: 0px;
 	margin: 0px;
 }
 
 #site-nav li {
-	margin: 20px 5px 20px 0px;
-	text-align: center;
-	display: inline-block;
-	font-size: 16px;
-	/*font-family: 'Nunito','Helvetica Neue',Helvetica,Arial,Sans-serif;*/
-	background: #f7f7f7;
+	margin: 0px 0px 0px 10px;
+	display: block;
+	float: right;
 }
 
-#site-nav li:hover {
-	background: #e9e9e9;
-}
-
-#site-nav a {
+#site-nav a:link,
+#site-nav a:visited {
 	display: block;
 	margin: 0px;
-  line-height: 3.333em;
-	padding: 0 1.2125em;
-	text-decoration: none;
-	color: #69686a;
+	padding: 0 18px;
+	font-size: 14px;
+	font-weight: bold;
+  line-height: 48px;
+	color: #4e4e4e;
+	text-transform: uppercase;
+	background: #f6f6f6;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
 }
+
+#site-nav a:hover,
+#site-nav a:focus,
+#site-nav a:active {
+	background: #0092e0;
+	color: #fff;
+}
+
 
 /* @site-content
 -------------------------------------------------------------- */
 
 #site-content {
-	width: 576px;
 	margin: 0px auto;
 	padding: 0px;
 }
@@ -105,57 +135,30 @@ article.post {
 	border-bottom: 1px solid #eee;
 	margin: 0px auto;
 	text-align: left;
-	padding-top: 20px;
-}
-
-article.post header h2 {
-	color: #515151;
-	margin: 0px 0px 16px 0px;
-	font-size: 30px;
-	font-weight: normal;
+	padding-top: 36px;
 }
 
 article.post header small {
-	margin: 16px 0px 16px 2px;
+	display: block;
+	margin: 16px 0px;
 	color: #b4b4b4;
 	font-size: 14px;
 	letter-spacing: 1px;
 }
 
-article.post header small.post-category {
-	border-left: 1px solid #eee;
-	padding-left: 5px;
-	margin: 16px 0px 16px 1px;
+article.post small.post-category {
 	color: #cfcfcf;
 	font-size: 14px;
 	letter-spacing: 1px;
 }
 
-article.post header small.post-category a {
+article.post small.post-category a {
 	color: #f2006a;
 	text-decoration: none;
 	border-bottom: 1px dotted;
 }
 
-article.post header small.post-category a:hover {
-	color: #9d0045;
-	text-decoration: none;
-	border-bottom: 1px solid;
-}
-
-article.post small.post-tag {
-	color: #cfcfcf;
-	font-size: 14px;
-	letter-spacing: 1px;
-}
-
-article.post small.post-tag a {
-	color: #f2006a;
-	text-decoration: none;
-	border-bottom: 1px dotted;
-}
-
-article.post small.post-tag a:hover {
+article.post small.post-category a:hover {
 	color: #9d0045;
 	text-decoration: none;
 	border-bottom: 1px solid;
@@ -174,44 +177,48 @@ article.post a{
 }
 
 article.post div.post-entry p {
-	margin: 16px 0px 16px 0px;
+	margin: 24px 0px;
 	color: #515151;
 	font-size: 16px;
 	font-weight: normal;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 24px;
 }
 
 div.page-navigator {
 	margin: 0px;
+	overflow: hidden;
 }
 
-div.page-navigator:after {
+/*div.page-navigator:after {
 	content: "";
 	display: block;
 	height: 0;
 	clear: both;
 	visibility: hidden;
 }
-
+*/
 div.page-navigator span {
 	margin: 20px 0px;
 	text-align: center;
-	/*display: inline-block;*/
-	font-size: 16px;
-	background: #f7f7f7;
-}
-
-div.page-navigator span:hover {
-	background: #e9e9e9;
 }
 
 div.page-navigator span a {
 	display: block;
 	margin: 0px;
-  line-height: 3.333em;
-	padding: 0 1.2125em;
-	text-decoration: none;
-	color: #69686a;
+	padding: 0 18px;
+	font-size: 14px;
+	font-weight: bold;
+  line-height: 48px;
+	color: #4e4e4e;
+	background: #f6f6f6;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+
+div.page-navigator span a:hover {
+	background: #0092e0;
+	color: #fff;
 }
 
 div.page-navigator span.prev {
@@ -222,47 +229,47 @@ div.page-navigator span.next {
 	float: right;
 }
 
-/* @site-list
+/* @post-list
 -------------------------------------------------------------- */
 #post-list article {
 	border-bottom: 1px dotted #eee;
-	padding: 15px 0px 15px 0px;
+	padding: 36px 0px 36px 0px;
 	text-align: left;
 }
 
-#post-list article header h2 {
-	color: #515151;
-	margin: 0px 0px 5px 0px;
+#post-list article header h1 {
+	margin: 0px;
 	font-size: 24px;
+	font-weight: bold;
 }
 
-#post-list article header h2 a {
-	color: #0092e0;
+#post-list article header h1 a {
+	color: #515151;
 	text-decoration: none;
 }
 
-#post-list article header h2 a:hover {
+#post-list article header h1 a:hover {
 	color: #005f92;
 }
 
 #post-list article header small {
-	margin: 5px 0px 5px 2px;
+	display: block;
+	margin: 10px 0px;
 	color: #b4b4b4;
-	font-size: 14px;
+	font-size: 12px;
 	letter-spacing: 1px;
 }
 
 #post-list article div.entry p {
-	margin: 5px 0px 16px 0px;
+	margin: 16px 0px;
 	color: #515151;
 	font-size: 16px;
-	font-weight: 300;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	line-height: 30px;
+	font-weight: normal;
+	line-height: 24px;
 }
 
 #post-list article div.entry small {
-	margin: 5px 0px 5px 2px;
+	margin: 5px 0px;
 	color: #cfcfcf;
 	font-size: 14px;
 	letter-spacing: 1px;
@@ -286,19 +293,19 @@ div.page-navigator span.next {
 
 #site-footer {
 	margin: 0px auto;
-	width: 576px;
-	padding: 0px 50px;
+	padding: 0px;
+	width: 690px;
 }
 
 #site-info {
 	padding: 20px 0px;
-	text-align: left;
-	border-top: 1px solid #eee;
+	text-align: center;
 }
 
-#site-info p {
+#site-info p, #site-info a{
 	margin: 0px;
 	font-size: 14px;
+	color: #e9e9e9;
 }
 
 #site-info a:link,

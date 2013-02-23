@@ -4,20 +4,14 @@ layout: default
 
 <article class="post">
 	<header>
-		<h2>{{ page.title }}</h2>
+		<h1 class="page-title">{{ page.title }}</h1>
 		<small>{{ page.date | date: "%B %d, %Y" }}</small>
-		<small class="post-category">Categorized under <a href="/categories/#{{ page.categories }}">{{ page.categories }}</a></small>
 	</header>
 
 	<div class="post-entry">{{ content }}</div>
 
 	<div class="post-meta">
-		<small class="post-tag">
-			Tagged as
-			{% for tag in page.tags %}
-			<a href="/tags/#{{ tag }}"> {{ tag }}</a>
-			{% endfor %}
-		</small>
+		<small class="post-category">Categorized under <a href="/categories/#{{ page.categories }}">{{ page.categories }}</a></small>
 	</div>
 
 	<div id="post-comments">

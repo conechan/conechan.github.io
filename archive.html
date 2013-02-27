@@ -11,7 +11,7 @@ permalink: /archive/
 		<h2>{{ y }}</h2>
 	{% endif %}
 	<li>
-		<time datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
+		<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y年%m月%d日" }}</time>
 		<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 	</li>
 {% endfor %}

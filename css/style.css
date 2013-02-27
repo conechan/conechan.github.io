@@ -20,7 +20,7 @@ body {
 	font-size: 16px;
 	font-weight: normal;
 	font-family: Arial, sans-serif;
-	line-height: 24px;
+	line-height: 1.5;
 	color: #5f5f5f;
 }
 
@@ -42,6 +42,88 @@ a:hover, a:focus, a:active {
 
 a {
 	text-decoration: none;
+}
+
+hr {
+	color: #5f5f5f;
+	margin: 36px 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 24px 0px;
+}
+
+h1 {
+	font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.4em;
+}
+h4 {
+  font-size: 1.2em;
+}
+h5 {
+  font-size: 1em;
+}
+h6 {
+  font-size: 0.8em;
+}
+
+ol, ul {
+	margin: 0 0 1.625em 1.5em;
+	padding: 0px;
+}
+
+ol{
+	list-style-type: decimal;
+}
+
+ul {
+  list-style: square outside none;
+ }
+
+ blockquote {
+ 	border-left: 4px solid #515151;
+ 	background-color: #f6f6f6;
+  margin: 24px;
+  padding: 8px 24px;
+	color: #777;
+	font-style: italic;
+	font-weight: 100;
+ }
+
+ code {
+ 	background-color: #f6f6f6;
+ 	font-size: 14px;
+ 	padding: 4px;
+ 	border: 1px solid #ccc;
+ 	border-radius: 3px;
+ }
+
+ pre {
+ 	border: 1px solid #ccc;
+ 	padding: 6px 10px;
+ 	background-color: #f6f6f6;
+ 	border-radius: 3px;
+}
+
+pre code {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}
+
+img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .page-title {
@@ -277,13 +359,11 @@ div.page-navigator span.next {
 
 #post-list article div.entry a {
 	color: #f2006a;
-	text-decoration: none;
 	border-bottom: 1px dotted;
 }
 
 #post-list article div.entry a:hover {
 	color: #9d0045;
-	text-decoration: none;
 	border-bottom: 1px solid;
 }
 
@@ -317,4 +397,62 @@ div.stie-info a:visited {
 #site-info a:focus,
 #site-info a:active {
 	border-bottom: 1px solid;
+}
+
+/* @page
+-------------------------------------------------------------- */
+div .page {
+	margin: 36px 0;
+}
+
+.page h2 {
+	display: block;
+	color: #4e4e4e;
+	font-size: 20px;
+	font-weight: normal;
+	background: #f6f6f6;
+	text-align: center;
+	line-height: 48px;
+	border-radius: 8px;
+}
+
+.page ul {
+	list-style: none;
+	margin: 0;
+}
+
+.page li {
+	list-style: none;
+	padding: 5px 3px;
+	margin: 0;
+	border-bottom: 1px dotted #eee;
+	line-height: 30px;
+}
+
+.page li time {
+	float: right;
+	color: #b4b4b4;
+}
+
+.page-categories a {
+	font-size: 18px;
+	color: #f2006a;
+	padding: 1px 0px;
+	margin-right: 16px;
+	border-bottom: dotted 1px;
+}
+
+.page-categories a:hover {
+	border-bottom: 1px solid;
+}
+
+.page-categories a span {
+	font-size: 12px;
+	color: #fff;
+	background-color: #f2006a;
+	border-radius: 10px;
+	padding: 1px 5px;
+	vertical-align: middle;
+	position: relative;
+	top: -2px;
 }

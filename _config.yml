@@ -4,4 +4,4 @@ title: cone.cc
 pygments: true
 paginate: 5
 author: cone
-markdown: rdiscount
+markdown: redcarpet

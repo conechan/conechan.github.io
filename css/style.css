@@ -309,6 +309,7 @@ div.page-navigator span.prev {
 
 div.page-navigator span.next {
 	float: right;
+	margin-left: 10px;
 }
 
 /* @post-list

@@ -56,7 +56,7 @@ permalink: /cv-buss/
 - Good knowledge in telecom and Internet protocols.
 - Basic knowledge in Java (self-studying).
 - Good knowledge in software development process.
-- Good written and oral English
+- Good written and oral English.
 
 ---
 

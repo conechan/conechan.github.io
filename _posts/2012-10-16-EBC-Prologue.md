@@ -1,9 +1,9 @@
 ---
 layout: post
-title: EBC序
+title: EBC.序
 description: 回来差不多一个星期了，每天忙着各种事情，同时也一直在纠结着游记该怎么写好。
-categories: Life
-tags: EBC Travel
+categories: Travel
+tags: EBC 
 ---
 ## 序的序
 

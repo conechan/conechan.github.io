@@ -9,7 +9,7 @@ permalink: /cv-buss/
 
 ## APPLY POSITION
 
-- **Java Designer (Prefer Web or Internet application project)**
+- **System Verification Engineer**
 
 ---
 
@@ -32,6 +32,7 @@ permalink: /cv-buss/
 
 - Draft and execute test plan and test case.
 - Find and track software defect, debug with software designers.
+- Currently, I am on a business trip for Beijing MIIT LTE testing.
 
 ### CDMA CO Lab Support Engineer in GDNT TDD (Jul. 2008 – Nov.2010)
 
@@ -51,15 +52,16 @@ permalink: /cv-buss/
 
 ## PROFESSIONAL CAPABILITY
 
-- Experienced amateur Web developer (PHP/MVC/Python/HTML).
-- Experienced UNIX-like system user.
-- Good knowledge in telecom and Internet protocols.
-- Basic knowledge in Java (self-studying).
 - Good knowledge in software development process.
+- Experienced UNIX-like system user.
+- Experienced Web developer (PHP/MVC/Python/HTML).
+- Basic knowledge in Java (self-studying).
+- Good knowledge in telecom and Internet protocols.
 - Good written and oral English.
 
 ---
 
 ## SELF ACCESSMENT
 
-- I have great interesting and passion in Web and Internet application development job, and I am sure I can make it.
+- I have great interesting and passion for BUSS business.
+- I think my capability is very fit for this job, and I am sure I can bring great efficacy for the organization.

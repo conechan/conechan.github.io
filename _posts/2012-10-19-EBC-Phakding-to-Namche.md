@@ -5,6 +5,8 @@ description: 今天我们则要从2610m的Phakding，爬升到3440m的Namche，�
 categories: Travel
 tags: EBC 
 ---
+2012年9月23日
+
 先补充一下昨天的海拔，起点Lukla是2840m，终点Phakding是2610m，路途的海拔没上升反而下降了，所以大家几乎都是走着玩的了。
 
 今天我们则要从2610m的Phakding，爬升到3440m的Namche，上升800m。到了海拔3000+的地方，高反开始略显，别着急别急亲爱的。

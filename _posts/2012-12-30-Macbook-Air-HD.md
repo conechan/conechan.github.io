@@ -17,8 +17,8 @@ OSX的文件系统是HFS+格式，现代Windows的文件系统是NTFS格式。OS
 
 除了储存文件，我还想用移动硬盘来做OSX的安装盘，做Time Machine备份，最后我那个750GB的移动硬盘有了下面这个分区方案。
 
-* 5GB for OSX安装盘，HFS+格式
-* 200GB for Time Machine（据说Time Machine的分区最好为系统分区的1.5到2倍），HFS+格式
+* 10GB for OSX安装盘，HFS+格式 **（Update on 2013年10月24日，Mavericks已经长大到5.29GB了，这里分10GB稳妥，Sorry for 以前的误导>_<）**
+* 195GB for Time Machine（据说Time Machine的分区最好为系统分区的1.5到2倍），HFS+格式
 * 50GB for Mac的各种东西，Windows不可能用到的，HFS+格式
 * 剩下的做储存仓库，exFAT格式
 

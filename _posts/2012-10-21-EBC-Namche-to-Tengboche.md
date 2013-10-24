@@ -55,4 +55,3 @@ tags: EBC
 一大早直升机就出动了。不过后来我们也call了一架，也是清晨。
 
 <a href="http://www.flickr.com/photos/49199884@N08/10432655863/" title="Flickr 上 cone.cc 的 一大早直升机就出动了"><img src="http://farm8.staticflickr.com/7395/10432655863_c9a8968ffe_z.jpg" width="640" height="426" alt="一大早直升机就出动了"></a>
- 

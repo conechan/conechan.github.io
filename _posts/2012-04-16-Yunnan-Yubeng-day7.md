@@ -15,7 +15,7 @@ tags: Yunnan
 
 上雨崩（3100M）到下雨崩（3000M）的一段路是连续1km的Z字形下坡，两村中间隔着一条雨崩河。
 
-云南流水账——雨崩篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453709585/" title="Flickr 上 cone.cc 的 下雨崩看上雨崩"><img src="http://farm6.staticflickr.com/5511/10453709585_2432efea06.jpg" width="480" height="360" alt="下雨崩看上雨崩"></a>
 
 为了赶路，加上又是下坡，我们开始都走得很快，15分钟左右就走到下雨崩了。
 这里说说这段路，走下去是很快很快的，但走上去就叫人崩溃了。还要说说我们两晚都住在上雨崩，这样就不用背着大包走这段让人崩溃的路了，那是个明智的决定。
@@ -24,7 +24,7 @@ tags: Yunnan
 
 下雨崩风景很不错。
 
-云南流水账——雨崩篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453866743/" title="Flickr 上 cone.cc 的 下雨崩"><img src="http://farm8.staticflickr.com/7408/10453866743_b879919693.jpg" width="480" height="360" alt="下雨崩"></a>
 
 下雨崩（3000M）到神瀑（3680M），7km的山路。这段路是藏人转山朝圣的路，路径明显，是不可能迷路的了。
 
@@ -34,15 +34,15 @@ tags: Yunnan
 
 一路走，路过一条河边，有无数的尼玛堆。
 
-云南流水账——雨崩篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453866613/" title="Flickr 上 cone.cc 的 尼玛堆"><img src="http://farm4.staticflickr.com/3829/10453866613_811e7ec595.jpg" width="480" height="360" alt="尼玛堆"></a>
 
 然后继续往山上走，同样的，开始有积雪了。
 
 9:15，来到了高山牧场，雾气围绕着雪山，犹如一幅水墨画。
 
-云南流水账——雨崩篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453696166/" title="Flickr 上 cone.cc 的 高山牧场"><img src="http://farm8.staticflickr.com/7289/10453696166_bf1f3be7d2.jpg" width="480" height="360" alt="高山牧场"></a>
 
-云南流水账——雨崩篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453696146/" title="Flickr 上 cone.cc 的 雾气围绕着雪山"><img src="http://farm4.staticflickr.com/3740/10453696146_979059fc74.jpg" width="480" height="360" alt="雾气围绕着雪山"></a>
 
 继续走，碰到两个本地的藏人，问之神瀑还有多远，答曰还要走1小时，而且前面又是及膝的积雪。
 
@@ -56,11 +56,11 @@ Jason应该已经到了吧，但怎么往前望，都望不到他，只有一个
 
 走着，终于看到Jason从雪坡上坐着滑下来了，原来他已经折返了，问之，前面还有15分钟的路，好，加油。
 
-云南流水账——雨崩篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453866193/" title="Flickr 上 cone.cc 的 神瀑路上"><img src="http://farm8.staticflickr.com/7366/10453866193_4f6d3f8f61.jpg" width="480" height="360" alt="神瀑路上"></a>
 
 10:15，终于来到了神瀑。这是一个高山瀑布。可惜下面的路全积雪了，什么绕3圈的是不行了。
 
-云南流水账——雨崩篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453682074/" title="Flickr 上 cone.cc 的 神瀑"><img src="http://farm4.staticflickr.com/3771/10453682074_569451f8e4.jpg" width="360" height="480" alt="神瀑"></a>
 
 停留了10分钟，拿手机拍了几张，我也折返了。路上，看到队友们正往上爬。看表，10:30了，说好要折返的了。他们说，都来这了，一定要上神瀑。好吧，不能留下遗憾。后来他们的速度还是挺快的，我感觉已经领先起码40分钟了，但最后他们却只比我晚20分钟到旅馆。
 
@@ -94,7 +94,7 @@ Mandy的高反无影无踪了，一路下来走在最前，还大展她的歌喉
 
 19:30，回到飞来寺，天还是亮的，望梅里雪山，被云朵遮挡住了。
 
-云南流水账——雨崩篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453708435/" title="Flickr 上 cone.cc 的 此时此刻的梅里"><img src="http://farm8.staticflickr.com/7321/10453708435_efde1b013a.jpg" width="480" height="360" alt="此时此刻的梅里"></a>
 
 看来明天日照金山是无望的了，于是便在川菜馆住下，望不到雪山的双人标间，50元。
 

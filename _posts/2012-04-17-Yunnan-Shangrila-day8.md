@@ -23,15 +23,15 @@ tags: Yunnan
 
 爬到了一个小山头上，拍了下德钦的面貌。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453865823/" title="Flickr 上 cone.cc 的 德钦"><img src="http://farm6.staticflickr.com/5502/10453865823_1402fce265.jpg" width="480" height="360" alt="德钦"></a>
 
 然后感觉够钟吃个午饭，就往德钦城里走去。无处不在的房地产。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453681844/" title="Flickr 上 cone.cc 的 无处不在的房地产"><img src="http://farm4.staticflickr.com/3766/10453681844_13020be358.jpg" width="480" height="360" alt="无处不在的房地产"></a>
 
 找了家路边小店，吃了碗番茄蛋面，10元，物价不低啊。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453865623/" title="Flickr 上 cone.cc 的 番茄蛋面"><img src="http://farm8.staticflickr.com/7401/10453865623_c83057a2d7_o.jpg" width="480" height="360" alt="番茄蛋面"></a>
 
 吃完继续逛了下，寄了些明信片，就赶回去客运站坐车了。
 
@@ -39,21 +39,21 @@ tags: Yunnan
 
 12:40，车开到半路，车头突然冒烟，坏车了。没办法，只好下车等了。这时已经开到山路上了，雨没有下，气温还是比较低，穿着抓绒+外套都觉得冷。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453695696/" title="Flickr 上 cone.cc 的 坏车了"><img src="http://farm4.staticflickr.com/3715/10453695696_50f5ae892c_o.jpg" width="360" height="480" alt="坏车了"></a>
 
 本来以为要换车的，但整修了大半小时后，居然又能开车了。
 
 又是爬白马雪山的路，车爬到哑口上，司机和藏民欢呼了一下。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453692856/" title="Flickr 上 cone.cc 的 爬白马雪山"><img src="http://farm4.staticflickr.com/3785/10453692856_762e20a7aa_o.jpg" width="480" height="360" alt="爬白马雪山"></a>
 
 16:00，到奔子栏，客车会在这里休息10分钟左右。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453865453/" title="Flickr 上 cone.cc 的 奔子栏"><img src="http://farm4.staticflickr.com/3788/10453865453_de5cf6d2aa_o.jpg" width="480" height="360" alt="奔子栏"></a>
 
 继续前行，来的时候被挤在后排，基本没看什么风景，现在回程坐窗边看个够。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453678394/" title="Flickr 上 cone.cc 的 山上的小村"><img src="http://farm8.staticflickr.com/7291/10453678394_9a2f4c2dc7_o.jpg" width="480" height="360" alt="山上的小村"></a>
 
 19:00左右，到达香格里拉客运站。打了个小面的到长征路的古城停车场，5元。
 
@@ -67,7 +67,7 @@ tags: Yunnan
 
 晚上8点拍的。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453695446/" title="Flickr 上 cone.cc 的 香格里拉月光古城"><img src="http://farm6.staticflickr.com/5534/10453695446_a32f6bd126_o.jpg" width="360" height="480" alt="香格里拉月光古城"></a>
 
 从艰苦地方回来了，晚餐决定奢侈一下，去了一家比较高级的餐厅。牦牛肉汉堡、牦牛肉饺子、柠檬蜂蜜，共56元，味道很西式化。
 

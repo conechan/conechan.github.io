@@ -11,7 +11,7 @@ tags: Yunnan
 
 这样折腾了一下，再洗漱了一下，爬到楼顶，已经6:45了，星星都不见了，天微微微亮，有两个哥们已经架好脚架霸占了最佳位置在那里等日出。好吧，找了个次点的位置，架起掉了一条腿的八爪鱼脚架，我也等日出。
 
-​云南流水账——雨崩篇
+​<a href="http://www.flickr.com/photos/49199884@N08/10453710935/" title="Flickr 上 cone.cc 的 清晨的梅里"><img src="http://farm8.staticflickr.com/7391/10453710935_e386b7a0b7.jpg" width="480" height="360" alt="清晨的梅里"></a>
 
 天气很冷，虽然穿着羽绒，但要操作相机所以不能带手套，双手冷得快结冰了。
 
@@ -19,7 +19,7 @@ tags: Yunnan
 
 7:15，日照金山开始。
 
-​云南流水账——雨崩篇
+​<a href="http://www.flickr.com/photos/49199884@N08/10453710905/" title="Flickr 上 cone.cc 的 梅里雪山"><img src="http://farm3.staticflickr.com/2890/10453710905_4b3c202634.jpg" width="480" height="360" alt="梅里雪山"></a>
 
 天空干净得很，没有一丝云彩。大家都掏出相机手机，在那里狂拍。拍了半小时的样子，日照金山还在，但大家都拍累了，陆陆续续地散了。
 
@@ -29,13 +29,13 @@ tags: Yunnan
 
 10:10来到澜沧江边的门票点，雨崩套票，多谢230大元。前一晚有队友在梅里往事里就打听到门票涨价了，4月1号之前还是80的。没办法，都来到了，只能掏钱，千辛万苦，难不成打道回府？当然，爬下悬崖，游过澜沧江，再爬上悬崖也能逃票的。
 
-​云南流水账——雨崩篇
+​<a href="http://www.flickr.com/photos/49199884@N08/10453710805/" title="Flickr 上 cone.cc 的 澜沧江"><img src="http://farm8.staticflickr.com/7335/10453710805_b7a182888d.jpg" width="360" height="480" alt="澜沧江"></a>
 
 11:40，终于来到了西当温泉。注意，是西当温泉，不是西当，西当离温泉还有不近的一段路，西当温泉才是雨崩徒步的起点。
 
 一路的梨花很漂亮。
 
-​云南流水账——雨崩篇
+​<a href="http://www.flickr.com/photos/49199884@N08/10453684354/" title="Flickr 上 cone.cc 的 梨花"><img src="http://farm4.staticflickr.com/3708/10453684354_c3181070a8.jpg" width="480" height="360" alt="梨花"></a>
 
 这里，又拖拉了一下，把没用的东西打包寄存在温泉，免费的，但安全性就没法保证了，后来我们还是能完整拿回东西。
 
@@ -59,7 +59,7 @@ Mandy和Cherry两女生打算骑骡子到哑口，然后大家其余的行李找
 
 看起来跟我一样弱小的Ron，居然背着我的大包走在最前面，背着小包的我也跟上，边走边和他吹水。
 
-​云南流水账——雨崩篇
+​<a href="http://www.flickr.com/photos/49199884@N08/10453868203/" title="Flickr 上 cone.cc 的 Ron"><img src="http://farm6.staticflickr.com/5492/10453868203_8d1b3ccc39.jpg" width="360" height="480" alt="Ron"></a>
 
 Raymond，小龙和小希走在中间，拍照嬉戏，看来状态不错。
 
@@ -67,7 +67,7 @@ Jason负重，走在最后，看样子很累，说在找自己的节奏。
 
 走着走着，路过第一个休息点，看到一匹骡子在那里可怜地背着行李，站都站不稳了，直接跪了。
 
-​云南流水账——雨崩篇
+​<a href="http://www.flickr.com/photos/49199884@N08/10453697946/" title="Flickr 上 cone.cc 的 骡子"><img src="http://farm3.staticflickr.com/2823/10453697946_46151808a3.jpg" width="360" height="480" alt="骡子"></a>
 
 继续走，我差不多追不上Ron了，在那里气喘，而Ron还能在那里闲庭信步，拿着他的单反拍拍。
 
@@ -85,11 +85,11 @@ Jason负重，走在最后，看样子很累，说在找自己的节奏。
 
 一路的冰雪路，路过很多经幡。
 
-​云南流水账——雨崩篇
+​<a href="http://www.flickr.com/photos/49199884@N08/10469331635/" title="Flickr 上 cone.cc 的 经幡"><img src="http://farm4.staticflickr.com/3684/10469331635_19d28f743e.jpg" width="480" height="360" alt="经幡"></a>
 
 15:40，到达南宗哑口。算了下，4小时不到。
 
-​云南流水账——雨崩篇
+​<a href="http://www.flickr.com/photos/49199884@N08/10469337806/" title="Flickr 上 cone.cc 的 南宗哑口"><img src="http://farm6.staticflickr.com/5535/10469337806_2647f88146.jpg" width="360" height="480" alt="南宗哑口"></a>
 
 这里人不多，放下背包，休息一下，拍拍照，欣赏一下景色，然后吃个泡面。
 
@@ -103,11 +103,11 @@ Mandy和Cherry骑骡子，所以先到挺久了。Cherry状态不错，和她老
 
 一路景色迷人。
 
-​云南流水账——雨崩篇
+​<a href="http://www.flickr.com/photos/49199884@N08/10469331575/" title="Flickr 上 cone.cc 的 梅里就在面前"><img src="http://farm6.staticflickr.com/5523/10469331575_420b4d1de7.jpg" width="480" height="360" alt="梅里就在面前"></a>
 
 走走停停1个小时，上雨崩呈现在眼前。
 
-​云南流水账——雨崩篇
+​<a href="http://www.flickr.com/photos/49199884@N08/10469337916/" title="Flickr 上 cone.cc 的 上雨崩"><img src="http://farm6.staticflickr.com/5477/10469337916_7eac1008d6.jpg" width="360" height="480" alt="上雨崩"></a>
 
 路过一间小屋，又收了5元过路费，说住旅馆能退回。
 

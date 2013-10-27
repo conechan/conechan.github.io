@@ -9,7 +9,7 @@ tags: Yunnan
 
 一样的，出门打的，7元到客运站，这时8:05。马上进站问去普达措的班车，我晕，已经开走了，牌子不是写着8点30分才开的么，看来小地方坐车还是不能尽信公告，要打电话直接问好才行。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453680024/" title="Flickr 上 cone.cc 的 2012年4月丽江客运站的普达措班车信息"><img src="http://farm8.staticflickr.com/7328/10453680024_7cf20c2e04.jpg" width="360" height="480" alt="2012年4月丽江客运站的普达措班车信息"></a>
 
 这时外面的小面的司机不停在游说我包车，150元一天，大哥，我一个人出不起这钱啊。有点彷徨，不死心，再去售票处问一次，这个售票姐姐态度好点，热心地告诉我可以坐白水台的过路车，一样的15元。好吧，就坐这个吧，不过要等到9点10分。这时有对驴友在我后面听到我要去普达措，马上告诉我后面也有一位姑娘要去普达措，你们可以一起拼车。好吧，又有伴了。这姑娘叫晶晶，来自北京。交流了一下，她也同意坐9点10分的白水台过路车去普达措，不过她今晚要赶车回丽江，所以显得有点担心的样子。去的车订好了，然后是返程的车。打了电话给普达措班车的司机，他同意等我们到2点钟再回来，也行，赶一下路，4个小时应该能走完普达措的。
 
@@ -25,7 +25,7 @@ tags: Yunnan
 
 车开着开着，一路往更高海拔爬去，外面飘起了雪来。到了属都湖的栈道，我们3人小队下了车，那旅行团继续坐车到下一个景点。这时，周围都是枯黄一片，湖水有点少，天空阴沉沉，真心觉得有点不值。不过，雪不停地下，还算有一点点意境。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453694206/" title="Flickr 上 cone.cc 的 普达措"><img src="http://farm4.staticflickr.com/3768/10453694206_d542b3b6b6.jpg" width="480" height="360" alt="普达措"></a>
 
 一路随便走走拍拍，景色实在不怎么样，据说秋天的时候会很漂亮。偶尔有松鼠会走出来找你要吃，很可爱。这里的空气也很好，松树上都是挂着些共生植物，忘了叫什么了，我拿了几棵，包好了带回广州。
 
@@ -41,18 +41,18 @@ tags: Yunnan
 
 shopping mall里的游乐场。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453706805/" title="Flickr 上 cone.cc 的 香格里拉的商场"><img src="http://farm4.staticflickr.com/3825/10453706805_d29d7c1436.jpg" width="480" height="360" alt="香格里拉的商场"></a>
 
 商业步行街。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453863693/" title="Flickr 上 cone.cc 的 商业步行街"><img src="http://farm4.staticflickr.com/3793/10453863693_a9996ba001.jpg" width="360" height="480" alt="商业步行街"></a>
 
 臭水沟。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453863513/" title="Flickr 上 cone.cc 的 臭水沟"><img src="http://farm8.staticflickr.com/7350/10453863513_2db6bbcf72.jpg" width="360" height="480" alt="臭水沟"></a>
 
 宽敞的街道，很少车。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453679424/" title="Flickr 上 cone.cc 的 宽敞的街道"><img src="http://farm4.staticflickr.com/3722/10453679424_c1862d6d93.jpg" width="360" height="480" alt="宽敞的街道"></a>
 
 游荡了一个下午，感觉这里生活真不错。明天就要走了，各种不想走。

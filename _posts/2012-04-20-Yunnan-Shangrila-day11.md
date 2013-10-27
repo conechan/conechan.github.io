@@ -11,17 +11,17 @@ tags: Yunnan
 
 10分钟就到机场，机场后面是雪山，依依不舍。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453706185/" title="Flickr 上 cone.cc 的 机场后面是雪山"><img src="http://farm4.staticflickr.com/3825/10453706185_7a06c1964a.jpg" width="480" height="360" alt="机场后面是雪山"></a>
 
 这机场真够生态的，里面居然有牛在吃草。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453693806/" title="Flickr 上 cone.cc 的 很生态的机场"><img src="http://farm8.staticflickr.com/7433/10453693806_be9a552ae3.jpg" width="480" height="360" alt="很生态的机场"></a>
 
 走进去，人少得可怜。一抱住只轻松熊的职员走过来，问我是不是坐飞广州的航班。我答是，她说这里11点半才上班，然后让我到旁边的茶室喝茶等。我刚吃完烧烤喝饱可乐，不用喝茶了，于是便随便找了个位置坐着。她也回到原来的位置坐着，不时玩弄手中的轻松熊。
 
 机场里面的装饰很藏族。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453692676/" title="Flickr 上 cone.cc 的 机场的装饰"><img src="http://farm6.staticflickr.com/5512/10453692676_39e1bb6e36.jpg" width="480" height="360" alt="机场的装饰"></a>
 
 11点半，柜台上班，托运行李，安检，候机。
 

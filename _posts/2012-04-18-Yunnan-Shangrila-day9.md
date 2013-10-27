@@ -27,7 +27,7 @@ tags: Yunnan
 
 不一会儿，来到闻名的张老师客栈，从张老师的栈道就能下去中虎跳了，过路费要10元。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453681254/" title="Flickr 上 cone.cc 的 张老师客栈"><img src="http://farm4.staticflickr.com/3753/10453681254_4585502d96.jpg" width="480" height="360" alt="张老师客栈"></a>
 
 有了走雨崩的经验，这段路真的小菜一碟，十几分钟就下到江边了。上张老师家的中虎跳石，又是5元。（PS：后来走到前面的天梯，觉得景色壮丽很多，所以张老师的这一段我觉得不值得走。）
 
@@ -35,11 +35,11 @@ tags: Yunnan
 
 天梯又是10元的过路费，但感觉比张老师那边要值。到江边不用另外交钱，而且这里的江水气势猛多了，真的有浪花飘到脸上的。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453707655/" title="Flickr 上 cone.cc 的 浪花飘到脸上"><img src="http://farm4.staticflickr.com/3831/10453707655_d430fb9ff1.jpg" width="480" height="360" alt="浪花飘到脸上"></a>
 
 又在这里对着江水发呆了十几分钟，突然发现有位姑娘踩着高跟鞋出现在旁边，哥又服了。不厚道地偷拍了一下。虽然是小高跟，但据我后来走了天梯的路看，还是有点不可思议。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453681204/" title="Flickr 上 cone.cc 的 穿高跟走虎跳"><img src="http://farm8.staticflickr.com/7380/10453681204_be00371f17.jpg" width="360" height="480" alt="穿高跟走虎跳"></a>
 
 感觉自己坐在这个热门拍照地方阻碍别人实在不好意思，于是便动身走了，看表，13:00，开始爬天梯。
 
@@ -47,17 +47,17 @@ tags: Yunnan
 
 走到半路往下拍，看人和江的大小比例。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453681014/" title="Flickr 上 cone.cc 的 天梯俯视虎跳"><img src="http://farm6.staticflickr.com/5541/10453681014_4ae1359970.jpg" width="360" height="480" alt="天梯俯视虎跳"></a>
 
 爬上去还是挺累的，加上膝头伤了，不敢走太猛，爬一段，歇一段。爬到某个地方，才发现自己miss掉了传说中的勇士梯。算了，没理由又跑下去重新爬上来吧。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453680774/" title="Flickr 上 cone.cc 的 勇士梯"><img src="http://farm3.staticflickr.com/2842/10453680774_4fe7eb8454.jpg" width="360" height="480" alt="勇士梯"></a>
 
 继续爬，快到顶的时候，风景有点漂亮。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453864693/" title="Flickr 上 cone.cc 的 虎跳峡"><img src="http://farm6.staticflickr.com/5504/10453864693_e46496a13f.jpg" width="480" height="360" alt="虎跳峡"></a>
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453678454/" title="Flickr 上 cone.cc 的 差不多到顶"><img src="http://farm6.staticflickr.com/5491/10453678454_561b85b248.jpg" width="480" height="360" alt="差不多到顶"></a>
 
 14:00，上到公路边，用了1个小时。所以下去中虎跳到返回公路需时大概2个小时吧。休息了一下，然后四周找人拼车。晕了，原来大家都是买青年旅社回丽江的车票的，要等到4点才开车。找不到散客，便打电话给刚刚送我进来的那个司机，问问能不能帮忙找附近的顺路司机，无果。这时来了辆小面的，我便过去询问，一看，正是今天从香格里拉送我过来的那女司机，有缘啊。原来她是被人包车来游虎跳了，等会儿要去丽江。不过，她还是我帮找到了另一辆顺路车，20元送我出桥头。
 
@@ -71,7 +71,7 @@ tags: Yunnan
 
 路过小中甸，这里很容易出现圣光，就是阳光透过云层的空洞直射下来，可见到一束束的光。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453864573/" title="Flickr 上 cone.cc 的 小中甸"><img src="http://farm3.staticflickr.com/2879/10453864573_33781569b9.jpg" width="480" height="360" alt="小中甸"></a>
 
 车开太快了，1个半小时，便回到了香格里拉，这时是下午4点多。在古城停车场下了车，和Calvin say goodbye，继续闲逛。
 
@@ -79,7 +79,7 @@ tags: Yunnan
 
 天空很蓝很蓝。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453864473/" title="Flickr 上 cone.cc 的 蓝得令人发指的天空"><img src="http://farm8.staticflickr.com/7403/10453864473_627c233145.jpg" width="360" height="480" alt="蓝得令人发指的天空"></a>
 
 来到转经筒旁边，一群人在齐力想转动它。我也走过去帮忙，可是合力拉了几下，还是转不动，我就放弃了，走到一旁。这时来了更多的人，大家一用力，还真转动了。
 
@@ -87,8 +87,8 @@ tags: Yunnan
 
 吃完面，继续在路上慢悠悠地走，7点半了，天还很亮，不过路上行人极少，绝大部分店子都关门了，感觉这边的生活很是悠闲啊。放几张路上拍的图。
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453680234/" title="Flickr 上 cone.cc 的 7点半了"><img src="http://farm3.staticflickr.com/2867/10453680234_8e02ab8a78.jpg" width="480" height="360" alt="7点半了"></a>
 
-云南流水账——香格里拉篇
+<a href="http://www.flickr.com/photos/49199884@N08/10453864263/" title="Flickr 上 cone.cc 的 八点半了"><img src="http://farm4.staticflickr.com/3751/10453864263_802ed5431f.jpg" width="480" height="360" alt="八点半了"></a>
 
 8点半，天开始黑了，于是便返回古城的客栈休息。洗完澡，又在床上拿手机研究明天去普达措的攻略。这样没什么安排的旅游，前一晚再做第二天玩的功课，也挺过瘾的。

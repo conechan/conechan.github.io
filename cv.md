@@ -9,7 +9,7 @@ permalink: /cv-buss/
 
 ## APPLY POSITION
 
-- **System Verification Engineer**
+- **Software Design Engineer (Java)**
 
 ---
 
@@ -22,7 +22,7 @@ permalink: /cv-buss/
 - ESN: 020-89675830
 - Mobile: 18688278023
 - Email: [charlie.z.chen@ericsson.com](mailto:charlie.z.chen@ericsson.com)
-- Website: [http://cone.cc/cv-buss/](http://cone.cc/cv-buss/)
+- Website: [http://cone.cc/](http://cone.cc/)
 
 ---
 
@@ -32,7 +32,8 @@ permalink: /cv-buss/
 
 - Draft and execute test plan and test case.
 - Find and track software defect, debug with software designers.
-- Currently, I am on a business trip for Beijing MIIT LTE testing.
+- Beijing MIIT LTE IV this half year.
+- Self-learning JCAT framework recently.
 
 ### CDMA CO Lab Support Engineer in GDNT TDD (Jul. 2008 – Nov.2010)
 
@@ -52,10 +53,10 @@ permalink: /cv-buss/
 
 ## PROFESSIONAL CAPABILITY
 
-- Good knowledge in software development process.
+- Experienced Web developer (PHP / MVC / Python).
+- Basic knowledge in Java/TestNG (self-studying).
+- Familiar with software develop environment (Eclipse IDE / Git version control).
 - Experienced UNIX-like system user.
-- Experienced Web developer (PHP/MVC/Python/HTML).
-- Basic knowledge in Java (self-studying).
 - Good knowledge in telecom and Internet protocols.
 - Good written and oral English.
 
@@ -63,5 +64,5 @@ permalink: /cv-buss/
 
 ## SELF ACCESSMENT
 
-- I have great interesting and passion for BUSS business.
-- I think my capability is very fit for this job, and I am sure I can bring great efficacy for the organization.
+- I have great interesting and passion in automation test tool development.
+- I am a quick learner, and I am sure I can take this job.

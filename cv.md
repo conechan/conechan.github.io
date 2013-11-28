@@ -1,7 +1,7 @@
 ---
 layout: paper
 title: Charlie Chen
-permalink: /cv-buss/
+permalink: /cv/
 ---
 # Charlie Chen
 

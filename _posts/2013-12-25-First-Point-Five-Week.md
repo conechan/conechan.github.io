@@ -27,7 +27,7 @@ tags: Job
 
 你看，其实生活还是挺充实的（自我感觉良好中）。暂且算是吧。后面的路还是没啥底，要不断激励自己督促自己才行。
 
-睡意来了，Merry Chritsmas～
+睡意来了，Merry Christmas～
 
 -EOF-
 

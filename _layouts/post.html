@@ -2,18 +2,23 @@
 layout: default
 ---
 
-<article class="post">
+<article class="post-container">
 	<header>
-		<h1 class="page-title">{{ page.title }}</h1>
-		<small>{{ page.date | date: "%B %d, %Y" }}</small>
+		<h1 class="post-title">{{ page.title }}</h1>
+		<small class="post-date">{{ page.date | date: "%Y年%m月%d日" }}</small>
 	</header>
 
-	<div class="post-entry">{{ content }}</div>
+	<div class="post-content">{{ content }}</div>
 
-	<div class="post-meta">
-		<small class="post-category">Categorized under <a href="/categories/#{{ page.categories }}">{{ page.categories }}</a></small>
-	</div>
-
+  <div class="post-nav clearfix">
+    {% if page.previous %}
+		<a class="post-nav-prev" href="{{ page.previous.url }}">&larr;</a>
+    {% endif %}
+    <hr>
+    {% if page.next %}
+		<a class="post-nav-next" href="{{ page.next.url }}">&rarr;</a>
+    {% endif %}
+  </div>
 	<div id="post-comments">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
@@ -31,16 +36,3 @@ layout: default
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 	</div>
 </article>
-
-<div class="page-navigator">
-	{% if page.previous %}
-	<span class="prev">
-		<a href="{{ page.previous.url }}">&larr; {{ page.previous.title }}</a>
-	</span>
-	{% endif %}
-	{% if page.next %}
-	<span class="next">
-		<a href="{{ page.next.url }}">{{ page.next.title }} &rarr;</a>
-	</span>
-	{% endif %}
-</div>

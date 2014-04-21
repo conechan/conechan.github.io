@@ -1,12 +1,14 @@
 ---
-layout: page
-title: About
+layout: about
+title: 关于我
 permalink: /about/
 ---
-## Bio
-- 自学会上网就用的昵称：cone
-- 自中学被命名后到工作才使用的英文名：Charlie
-- 姓陈
-- 由上三项凑合出：cone.cc
--	80后，奔三
-- 努力上班中
+
+Charlie Chen，男，奔三，失业，单身。
+
+原是一通信工程师，现正转行前端中，求工作。
+
+[这里是我的简历](/cv-cn)。
+
+[Here is my CV](/cv-en).
+

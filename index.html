@@ -1,44 +1,25 @@
 ---
 title: Home
-layout: default
+layout: paper
 permalink: /
 ---
-<div id="post-list">
-	{% for post in paginator.posts %}
-	<article>
-		<header>
-			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-			<small>{{ post.date | date: "%B %d, %Y" }}</small>
-		</header>
-		<div class="entry">
-			<p>{{ post.description }}</p>
-			<small><a href="{{ post.url }}">Read more</a></small>
-		</div>
-	</article>
-	{% endfor %}
-</div>
-
-<div class="page-navigator">
-	{% if paginator.next_page %}
-	<span class="prev">
-		<a href="/page{{ paginator.next_page }}">&larr; Older</a>
-	</span>
-	{% endif %}
-	{% if paginator.previous_page %}
-	<span class="next">
-		{% if paginator.previous_page == 1 %}
-		<a href="/">Newer &rarr;</a>
-		{% else %}
-		<a href="/page{{ paginator.previous_page }}">Newer &rarr;</a>
-		{% endif %}
-	</span>
-	{% endif %}
-	{% if paginator.page == 1 %}
-	<span class="next">
-		<a href="/search/">Search</a>
-	</span>
-	<span class="next">
-		<a href="http://cone.cc/atom.xml">Subsribe</a>
-	</span>
-	{% endif %}	
-</div>
+  <div id="site-index-wrapper">
+    <!-- avatar start -->
+    <div id="site-avatar">
+      <a href="/"><img src="/logo.jpg"></a>
+    </div>
+    <!-- avatar end -->
+    <div id="site-name">
+      <div class="site-name-before site-hr-before"></div>
+      <div class="site-name-content">cone.cc</div>
+      <div class="site-name-after site-hr-after"></div>
+    </div>
+    <!-- nav start -->
+    <nav role="navigator">
+      <ul>
+        <li><a href="/archive/">随笔<span>写</span></a></li>
+        <li><a href="/about/">关于<span>我</span></a></li>
+      </ul>
+    </nav>
+    <!-- nav end -->
+  </div>

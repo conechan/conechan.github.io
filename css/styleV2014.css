@@ -100,6 +100,12 @@ textarea {
 /* GENERAL RULES
 ------------------------------------------------------------------------------*/
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 a {
   color: #8e8e8c;
   text-decoration: none;
@@ -119,7 +125,10 @@ a:active {
   -o-transition: 0.3s;
 }
 
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* LAYOUT RULES
 ------------------------------------------------------------------------------*/
@@ -574,7 +583,7 @@ footer a {
   display: inline-block;
   vertical-align: middle;
   margin: 30px 0;
-  width: 400px;
+  width: 60%;
   border: none;
   height: 1px;
   background: #dededc;
@@ -583,7 +592,7 @@ footer a {
 }
 
 .post-nav {
-  width: 560px;
+  width: 100%;
   height: 62px;
   position: relative;
   text-align: center;
@@ -633,6 +642,39 @@ footer a {
   color: #fff;
   background: #8e8e8c;
 }
+
+/* RESPONSIVE RULES
+------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 800px) {
+  #site-sidebar-vr {
+    display: none;
+  }
+  #site-sidebar {
+    position: relative;
+    height: 160px;
+  }
+  #site-avatar {
+  }
+  #site-sidebar-wrapper {
+    margin: 0 auto;
+    float: none;
+  }
+  #site-sidebar-wrapper nav {
+    display: none;
+  }
+  #site-main {
+    float: none;
+    margin: 0 auto;
+    width: auto;
+    max-width: 610px;
+    padding: 0 30px;
+  }
+  .post-container header {
+    text-align: center;
+  }
+}
+
 
 
 /* ==========================================================================

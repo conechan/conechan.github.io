@@ -3,20 +3,17 @@ layout: blog
 title: 随笔写
 permalink: /archive/
 ---
-<div id="site-main-title">
-  <h1>随笔<span>写</span></h1>
-</div>
-<div id="site-archive">
+<!-- main title start -->
+<h1 class="main-title trans">随笔<span class="circle trans">写</span></h1>
+<!-- main title end -->
+<!-- archive list start -->
+<div class="archive">
   <ul>
   {% for post in site.posts %}
     {% capture y %}{{ post.date | date: '%Y' }}{% endcapture %}
     {% if year != y %}
       {% assign year = y %}
-      <div class="site-archive-year">
-        <div class="site-archive-year-before site-hr-before"></div>
-        <div class="site-archive-year-content">{{ y }}</div>
-        <div class="site-archive-year-after site-hr-after"></div>
-      </div>
+      <h2 class="archive-year">{{ y }}</h2>
     {% endif %}
     <li>
       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
@@ -25,3 +22,4 @@ permalink: /archive/
   {% endfor %}
   </ul>
 </div>
+<!-- archive list end-->

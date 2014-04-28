@@ -12,27 +12,12 @@ layout: blog
 
   <div class="post-nav clearfix">
     {% if page.previous %}
-		<a class="post-nav-prev" href="{{ page.previous.url }}">&larr;</a>
+		<a class="circle prev" href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr;</a>
     {% endif %}
     <hr>
     {% if page.next %}
-		<a class="post-nav-next" href="{{ page.next.url }}">&rarr;</a>
+		<a class="circle next" href="{{ page.next.url }}" title="{{ page.next.title }}">&rarr;</a>
     {% endif %}
   </div>
-	<div id="post-comments">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'conecc'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-	</div>
+  {% include comments.html %}
 </article>

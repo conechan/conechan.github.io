@@ -1,5 +1,5 @@
 ---
-layout: paper
+layout: page
 title: Charlie Chen
 permalink: /cv/
 ---

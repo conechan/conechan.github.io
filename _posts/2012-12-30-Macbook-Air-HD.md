@@ -46,6 +46,8 @@ OSX的文件系统是HFS+格式，现代Windows的文件系统是NTFS格式。OS
 
 然后最最重要的，**禁止Time Machine本地备份**。因为当移动硬盘没接上的时候，Time Machine就会默默地往你宝贵的SSD空间上备份了……在终端窗口输入如下命令禁止掉。
 
-    sudo tmutil disablelocal
+{% highlight console %}
+sudo tmutil disablelocal
+{% endhighlight %}
 
 好了，大功告成，接上硬盘让Time Machine慢慢备份，我们庆功吃牛杂去～

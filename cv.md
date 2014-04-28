@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Charlie Chen
-permalink: /cv/
+permalink: /cv-en/
 ---
 # Charlie Chen
 

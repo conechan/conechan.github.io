@@ -674,14 +674,35 @@ hr {
   left: 0;
 }
 
+/* Index Wrapper
+   ---------------------------------------------------------------------------*/
+
+#index-wrapper {
+  height: 260px;
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#index-container {
+  position: relative;
+  bottom: 130px;
+  right: 100px;
+  height: 260px;
+  width: 200px;
+}
+
+
+
 /* RESPONSIVE RULES
 ------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 800px) {
-  #sidebar:after {
+  #container #sidebar:after {
     display: none;
   }
-  #sidebar {
+  #container #sidebar {
     position: relative;
     text-align: center;
     height: 170px;
@@ -689,31 +710,31 @@ hr {
     margin: 0 auto;
     min-height: 170px;
   }
-  .avatar {
+  #container .avatar {
     position: absolute;
     left: 0;
   }
-  .sidebar-nav {
+  #container .sidebar-nav {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .sitename {
+  #container .sitename {
     position: absolute;
     bottom: 0;
     left: 10px;
   }
-  #main {
+  #container #main {
     float: none;
     margin: 0 auto;
     width: auto;
     max-width: 610px;
     padding: 0 30px;
   }
-  .post-container header {
+  #container .post-container header {
     text-align: center;
   }
-  .main-title {
+  #container .main-title {
     text-align: center;
   }
 }

@@ -680,18 +680,18 @@ hr {
 #index-wrapper {
   height: 260px;
   width: 200px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
+  top: 20%;
+  margin: auto;
 }
 
-#index-container {
-  position: relative;
-  bottom: 130px;
-  right: 100px;
-  height: 260px;
-  width: 200px;
-}
+/*#index-container {*/
+  /*position: relative;*/
+  /*bottom: 130px;*/
+  /*right: 100px;*/
+  /*height: 260px;*/
+  /*width: 200px;*/
+/*}*/
 
 
 
@@ -956,4 +956,82 @@ hr {
   h3 {
     page-break-after: avoid;
   }
+}
+
+
+/* ==========================================================================
+   IE Hacks
+   ========================================================================== */
+
+.lt-ie9 .main-title span {
+  display: none;
+  visibility: hidden;
+}
+
+.lt-ie9 .sidebar-nav span {
+  display: none;
+  visibility: hidden;
+}
+
+.lt-ie9 .sidebar-nav a {
+  color: #8e8e8c;
+  left: 5px;
+  position: relative;
+}
+
+.lt-ie9 #container {
+  width: 800px;
+}
+
+.lt-ie8 .footer {
+  width: 500px;
+  text-align: right;
+}
+
+.lt-ie8 .archive li {
+  position: relative;
+}
+
+.lt-ie8 .archive li time {
+  float: none;
+  position: absolute;
+  right: 0;
+}
+
+.lt-ie7 body {
+  text-align: center;
+}
+
+.lt-ie7 #container {
+  position: static;
+  text-align: center;
+  width: 860px;
+}
+
+.lt-ie7 #sidebar {
+  position: static;
+  float: left;
+}
+
+.lt-ie7 #main {
+  position: static;
+  float: left;
+  text-align: left;
+  width: 640px;
+}
+
+.lt-ie7 .footer {
+  float: left;
+  clear: both;
+  text-align: right;
+  width: 100%;
+}
+
+.lt-ie7 .post-content .highlight pre {
+  width: 500px;
+  border: none;
+}
+
+.lt-ie7 .post-title {
+  margin-left: 0;
 }

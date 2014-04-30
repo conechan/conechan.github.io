@@ -44,12 +44,7 @@ html {
  */
 
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+
 }
 
 /*
@@ -82,32 +77,6 @@ textarea {
   resize: vertical;
 }
 
-/* ==========================================================================
-   Browse Happy prompt
-   ========================================================================== */
-
-.browsehappy {
-  margin: 0;
-  background: #333332;
-  color: #fff;
-  padding: .25em 0;
-  text-align: center;
-}
-
-.browsehappy a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-/**
- * color palette
- * #8e8e8c
- * #666665
- */
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
 
 /* ==========================================================================
    GENERAL RULES
@@ -147,6 +116,7 @@ a:hover,
 a:focus,
 a:active {
   color: #8e8e8c;
+  text-decoration: none;
   -webkit-transition: 0.3s;
      -moz-transition: 0.3s;
        -o-transition: 0.3s;
@@ -162,6 +132,9 @@ img {
 }
 
 hr {
+  display: block;
+  border: 0;
+  padding: 0;
   margin: 30px auto;
   width: 60%;
   border: none;
@@ -408,6 +381,7 @@ hr {
   display: block;
   list-style: none;
   margin: 24px auto;
+  word-wrap: break-word; /* IE need this */
 }
 
 .archive li a {
@@ -486,7 +460,7 @@ hr {
   font-size: 38px;
   font-weight: 700;
   margin: -6px 0 0 -5px;
-  word-wrap:break-word;
+  word-wrap: break-word;
   line-height: 2;
   font-family: "Times New Roman",Times,"Kai","Kaiti SC","KaiTi","BiauKai","楷体","楷体_GB2312",serif;
 }
@@ -905,6 +879,10 @@ hr {
     text-decoration: underline;
   }
 
+  .post-content a {
+    border-bottom: none;
+  }
+
   a[href]:after {
     content: " (" attr(href) ")";
   }
@@ -924,7 +902,6 @@ hr {
 
   pre,
   blockquote {
-    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -956,12 +933,59 @@ hr {
   h3 {
     page-break-after: avoid;
   }
+
+  #sidebar,
+  #post-comments,
+  .post-nav {
+    display: none;
+    visibility: hidden;
+  }
+
+  #main {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer {
+    text-align: center;
+    width: 100%;
+  }
 }
 
+/* ==========================================================================
+   Browse Happy prompt for less than IE9
+   ========================================================================== */
+
+.browsehappy {
+  margin: 0;
+  background: #333332;
+  color: #fff;
+  padding: .25em 0;
+  text-align: center;
+}
+
+.browsehappy a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.browsehappy a:hover,
+.browsehappy a:active {
+  text-decoration: none;
+  color: #8e8e8c;
+}
 
 /* ==========================================================================
    IE Hacks
    ========================================================================== */
+
+/* For IE6, IE7, IE8
+   ---------------------------------------------------------------------------*/
+
+/*
+ * Not support radius, remove the span effect.
+ */
 
 .lt-ie9 .main-title span {
   display: none;
@@ -973,20 +997,39 @@ hr {
   visibility: hidden;
 }
 
+/*
+ * Correct the navigation link position.
+ */
+
 .lt-ie9 .sidebar-nav a {
   color: #8e8e8c;
   left: 5px;
   position: relative;
 }
 
+/*
+ * Fixed the container width
+ */
+
 .lt-ie9 #container {
   width: 800px;
 }
+
+/* For IE6, IE7
+   ---------------------------------------------------------------------------*/
+
+/*
+ * Make the footer look fine.
+ */
 
 .lt-ie8 .footer {
   width: 500px;
   text-align: right;
 }
+
+/*
+ * Float bug in IE, use position in archive list.
+ */
 
 .lt-ie8 .archive li {
   position: relative;
@@ -998,15 +1041,43 @@ hr {
   right: 0;
 }
 
+/*
+ * Correct the image link underline.
+ */
+
+.lt-ie8 .post-content a {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+.lt-ie8 .post-container a:hover {
+  text-decoration: none;
+}
+
+/* For IE6
+   ---------------------------------------------------------------------------*/
+
+/*
+ * IE6 content center, margin auto not works :(
+ */
+
 .lt-ie7 body {
   text-align: center;
 }
+
+/*
+ * More width of #container in IE6, for image not overflow.
+ */
 
 .lt-ie7 #container {
   position: static;
   text-align: center;
   width: 860px;
 }
+
+/*
+ * Use float layout instead of fix position, because bugs.
+ */
 
 .lt-ie7 #sidebar {
   position: static;
@@ -1027,10 +1098,18 @@ hr {
   width: 100%;
 }
 
+/*
+ * Make pre more pretty in IE6
+ */
+
 .lt-ie7 .post-content .highlight pre {
   width: 500px;
   border: none;
 }
+
+/*
+ * Negative margin bug in IE6
+ */
 
 .lt-ie7 .post-title {
   margin-left: 0;

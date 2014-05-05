@@ -1,5 +1,5 @@
 ---
-layout: paper
+layout: page
 title: 陈嘉立（Charlie Chen）简历
 permalink: /cv-cn/
 ---

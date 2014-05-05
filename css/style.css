@@ -742,7 +742,8 @@ hr {
     bottom: 0;
     left: 10px;
   }
-  #container #main {
+  #container #main,
+  #page-wrapper {
     float: none;
     margin: 0 auto;
     width: auto;

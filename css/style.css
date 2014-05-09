@@ -679,13 +679,16 @@ hr {
 }
 
 #page-wrapper h6 {
-  font-size: 24px;
   text-align: center;
   margin: 0;
 }
 
 #page-wrapper .post-content {
   font-family: \5b8b\4f53,Arial,sans-serif;
+}
+
+.post-content p {
+  font-size: 16px;
 }
 
 #page-wrapper hr {

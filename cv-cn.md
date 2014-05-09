@@ -11,73 +11,84 @@ permalink: /cv-cn/
 
 ## 求职意向
 
-###### 前端工程师
+###### 前端开发工程师 ／ 前端测试工程师 ／ 移动端测试工程师
 
 ---
 
 ## 基本信息
 
 - 性别：男
-- 年龄：29
+- 年龄：29 岁
+- 工作年限：5.5 年
 - 电话：186-xxxx-xxxx （因隐私关系这里不便公开，可通过电邮索取）
 - 电邮：[conechan@gmail.com](mailto:conechan@gmail.com)
-- 博客：[http://cone.cc/](http://cone.cc/)
+- 博客：[cone.cc](http://cone.cc/)
 
 ---
 
-## 个人简介
+## 个人简述
 
-在通信行业工作了5年半，今年1月离职，然后一直在自学前端开发至今，现正寻求初级的前端开发职位。
+我是陈嘉立（Charlie Chen），本来是一名通信软件测试工程师，拥有超过 3 年的软件测试经验和 2 年的服务器运维经验。
 
-一直关注并热爱互联网，业余喜欢倒腾 Web 开发（主要是前端），但却一直踌躇没有投身到互联网行业，直到现在开始转变。
+除了本来的工作，我还是一名 Web 开发爱好者，从中学（2000年）开始就一直断断续续进行各种 Web 开发的实践。
 
-对互联网产品用户交互和体验有一定见解，喜欢美学，业余学习摄影和钢琴。
-
----
-
-## 专业技能
-
-### 近期常用
-
-- HTML：熟悉绝大部分语义，了解部分 HTML5 特性。
-- CSS：熟悉大部分常规用法，了解部分 CSS3 特性，知道部分 cross browser bug，最近重写了博客（[https://github.com/conechan/conechan.github.com](https://github.com/conechan/conechan.github.com)）。
-- Javascript：初学，了解语言特性，能看懂大部分代码，在看 The Good Parts。
-- Git：熟悉 Git 流程操作，博客托管在 Github Page 上。
-- NodeJS：清楚基本运行机理，跟着教程写过一些 Demo。
-
-### 基本了解
-
-- 理论：MVC，MVVM，AMD，CMD，AJAX，RWD，REST，HTTP。
-- 框架：Bootstrap，jQuery，Express，Socket.IO，Backbone，Angular。
-- 效率：LESS，SCSS，Grunt。
-
-### 荒废状态
-
-- PHP：2010年曾使用 CodeIngiter 框架在业余时间为部门开发测试服务器管理系统。
-- Python：曾自学过一段时间，尝试过基于 Django 框架的 Web 开发。
-
-### 其他习性
-
-- Mac 用户，Webstorm 用户，Goagent 用户。
-- 通过 Google, stackoverflow, MDN 解决问题，能流畅读懂英文文档。
+经过详细考虑，我在今年 1 月份离职，准备全身投入到互联网行业。近几个月我一直在学习 Web 前端开发，现正寻求**前端开发** ／ **前端测试** ／ **移动端测试**的职位。
 
 ---
 
 ## 工作经历
 
-### 2008年7月－2014年1月：爱立信移动数据应用研发中心（广州）
+### 2014 年 1 月 － 现在：学习 Web 开发技术（主要是 JavaScript）
 
-- 公司原为北电通信设备（Nortel）广东研发中心，2011年5月被爱立信（Ericsson）收购合并。
-- 2008年6月入职任实验室技术支持工程师，负责维护和搭建实验室测试环境。
-- 2010年11月自行申请调岗任产品测试工程师，负责通信软件测试。
-- 2014年1月公司人事调整，自愿离职。
+- 复习了 HTML(5) 和 CSS(3)，重写了[博客](https://github.com/conechan/conechan.github.com)的前端。
+- 学习 JavaScript，阅读了《Professional JavaScript for Web Developers》的基础部分章节，并练习了书中的程序例子。
+- 学习 NodeJS，仿照例子写了一个[博客](https://github.com/conechan/learnExpressNblog)程序和一个[聊天室](https://github.com/conechan/learnNodeChatroom)程序。
+- 目前正在学习 AngularJS 前端框架，并深入学习 JavaScript，阅读《JavaScript: The Good Parts》中。
+
+### 2010 年 10 月 － 2014 年 1 月：测试工程师 @ 爱立信移动数据应用技术研发（广州）有限公司
+
+- 公司原为[广东北电通信设备有限公司](http://en.wikipedia.org/wiki/Nortel)，于 2011 年 5 月被[爱立信](http://www.ericsson.com/)收购合并。
+- 2010 年 10 月自行内部申请调岗任测试工程师，日常负责通信软件（主要是黑盒）测试。
+  - 根据需求制定测试计划，编写和执行测试用例，控制测试进度和质量的平衡。
+  - 使用专业设备和软件模拟大用户量测试。
+  - 使用公司内部自行开发的框架（基于 JUnit）编写测试脚本进行自动化测试。
+  - 主要项目：[CDMA](http://en.wikipedia.org/wiki/CDMA2000)，[4G LTE](http://en.wikipedia.org/wiki/LTE_(telecommunication\)) 的[基站](http://en.wikipedia.org/wiki/Base_station)软件测试。
+- 2013 年下半年出差北京负责 4G LTE 软件测试，快速地学习了所需技术并融入当地工作环境。
+- 2014 年 1 月因部门业务衰退，离职寻求更好发展。
+
+### 2008 年 7 月 － 2010 年 10 月：技术支持工程师 @ 爱立信移动数据应用技术研发（广州）有限公司
+
+- 日常主要负责测试用服务器（Unix）、网络（路由交换）安装配置维护工作。
+- 使用 PHP CodeIngiter 框架快速开发了 Web 界面[测试服务器管理系统](https://github.com/conechan/TTMS)，方便测试人员控制服务器设备。
+- 在公司内网搭建了知识分享平台（MediaWiki），供同事分享和查阅技术心得。
 
 ---
 
 ## 教育经历
 
-### 2004年9月－2008年7月：华南理工大学 信息工程 本科
+### 2004 年 9 月 － 2008 年 7 月：信息工程本科学士 @ 华南理工大学
 
-- 曾在百步梯网站（[http://www.100steps.net/](http://www.100steps.net/)）工作，引入 Web 重构思想，对站内 table 布局栏目进行 CSS 重构。
+- 课外时间在[百步梯网站](http://www.100steps.net/)任美工（前端）组长，引入 Web 重构思想，对站内 table 布局栏目进行 CSS 重构。
 
 ---
+
+## 专业技能
+
+- 熟悉软件测试原理、方法，超过 3 年通信软件测试经验。
+- 熟悉 HTML 和 CSS，有一定的编写能力。
+- 初步掌握 JavaScript 和 NodeJS，有一定实践经验。
+- 熟悉软件开发流程（瀑布流／敏捷开发），熟悉 Git 版本控制。
+- 基本了解各种常见前后端开发技术。
+- 基本了数据库技术，使用过 MySQL 和 MongoDB。
+- 接触过的语言：C，PHP，Pyhton，Java。
+- 熟悉 Unix/Linux，有 2 年服务器运维经验。
+- 有较好的英语读写听说能力，能流畅读懂英文文档，工作 5 年多一直使用英语作为官方书面语言。
+
+---
+
+## 其他习性
+
+- Mac 用户。
+- 中度完美主义者，但不是处女座。
+- 艺术爱好者，业余学习摄影和钢琴。
+- 喜欢户外活动，骑车、爬山、徒步、潜水等。

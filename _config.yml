@@ -1,8 +1,6 @@
 permalink: /:year/:month/:day/:title
 url: cone.cc
 title: cone.cc
-pygments: true
-paginate: 5
+highlighter: pygments
 author: cone
 email: conechan@gmail.com
-markdown: redcarpet

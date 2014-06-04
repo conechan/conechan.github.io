@@ -1,0 +1,571 @@
+---
+layout: post
+title: 完成了汇编的一个小作业
+description: 完成了汇编的一个小作业
+categories: Old
+tags: Old
+---
+断断续续，又眠又休地写了3天，超了500行，有史以来写过最长的程序了。题目如下：
+
+程序采用菜单式选择，可接收用户输入的命令（1~5），各命令如下：  
+**按1键完成字符串小写字母变大写字母**  
+用户输入一由英文大小写字母或数字0~9组成的字符串（以回车结束），程序逐个检查字符串中各字符，将原串中小写字母变成大写字母，其它字符不变，并在屏幕上显示。用户按任一键，重做，按ESC键，返回主菜单。  
+**按2键完成找最大值**  
+接收用户输入的可显示字符串（以回车结束），程序将其中ASCII码值最大的字符显示出来。用户按任一键，重做，按ESC键，返回主菜单。  
+**按3键完成排序**  
+接收用户输入的可显示字符串，以回车结束。程序按ASCII码值大小由大到小排序并输出显示。用户按任一键，重做，按ESC键，返回主菜单。  
+**按4键显示时间**  
+首先提示用户对时，即用户输入时，分，秒（以空格或冒号分隔，以回车结束），然后，在屏幕上不断显示时间，格式为：××（时）：××（分）：××（秒），最好定点显示。用户按任一键，重新对时，按ESC键，返回主菜单。  
+**按5键，结束程序运行，返回系统提示符。**
+
+有些小bug的，已经没精力修改了。
+
+{% highlight nasm %}
+DATA SEGMENT  
+MEN00 DB '=====================$'  
+MEN0 DB 'Please choose the program by input the number :$'  
+MEN1 DB '1) String caps transform$'  
+MEN2 DB '2) Find the biggest$'  
+MEN3 DB '3) ASCII sort$'  
+MEN4 DB '4) Set & Show the time$'  
+MEN5 DB '5) Good bye$'  
+MSG1 DB 'Please input the string : $'  
+MSG2 DB 'Press ESC back to the menu , Press any other key to retry.$'  
+MSG3 DB 'The result is : $'  
+MSG4 DB 'Please input the time (hh:mm:ss) or (hh mm ss) : $'  
+MSG41 DB 'Fail ! Please check the time format.$'  
+MSG42 DB 'Success ! The time have changed.$'  
+MSG43 DB 'The time now is : $'  
+MSG5 DB 'BYE BYE$'  
+MSG6 DB 'ERROR ! Please input the number 1,2,3,4,5.$'  
+FLAG3 DB -1  
+ORG 3500H  
+BUF1 DB 100  
+DB ?  
+DB 100 DUP(?)  
+ORG 3800H  
+TIMA DB ?,?,':',?,?,':',?,?,'$'  
+DATA ENDS
+
+STACK SEGMENT PARA STACK 'STACK'  
+DB 100 DUP(?)  
+STACK ENDS
+
+CODE SEGMENT  
+ASSUME CS:CODE,DS:DATA  
+START:MOV AX,DATA  
+MOV DS,AX  
+STA:CALL MENU  
+MOV AH,08H  
+INT 21H  
+A1:CMP AL,31H  
+JNZ A2  
+CALL SUB1  
+JMP STA  
+A2:CMP AL,32H  
+JNZ A3  
+CALL SUB2  
+JMP STA  
+A3:CMP AL,33H  
+JNZ A4  
+CALL SUB3  
+JMP STA  
+A4:CMP AL,34H  
+JNZ A5  
+CALL SUB4  
+JMP STA  
+A5:CMP AL,35H  
+JNZ EOR  
+CALL SUB5  
+JMP EXIT  
+EOR:CALL SUB6  
+JMP STA  
+EXIT:MOV AH,4CH  
+INT 21H  
+;  
+SUB1 PROC NEAR  
+PUSH AX  
+PUSH BX  
+PUSH DX  
+PUSH SI  
+PUSH DI  
+STA1:CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG1  
+MOV AH,09H  
+INT 21H  
+;  
+CALL FAR PTR INP  
+;  
+LEA SI,BUF1+2  
+XOR AX,AX  
+TRS1:MOV AL,\[SI\]  
+CMP AL,61H  
+JL PAS1  
+CMP AL,79H  
+JG PAS1  
+SUB AL,20H  
+XCHG AL,\[SI\]  
+PAS1:CMP AL,'$'  
+JZ SHOW1  
+INC SI  
+JMP TRS1  
+;  
+SHOW1:CALL BRK  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG3  
+MOV AH,9  
+INT 21H  
+MOV DX,OFFSET BUF1+2  
+MOV AH,09H  
+INT 21H  
+;  
+CALL BRK  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG2  
+MOV AH,9  
+INT 21H  
+MOV AH,08H  
+INT 21H  
+CALL BRK  
+CMP AL,1BH  
+JNZ STA1  
+;  
+EXT1:POP DI  
+POP SI  
+POP DX  
+POP BX  
+POP AX  
+RET  
+SUB1 ENDP  
+;  
+SUB2 PROC NEAR  
+PUSH AX  
+PUSH CX  
+PUSH DX  
+PUSH SI  
+PUSH DI  
+STA2:CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG1  
+MOV AH,09H  
+INT 21H  
+;  
+CALL FAR PTR INP  
+;  
+LEA SI,BUF1+2  
+XOR CX,CX  
+MOV CL,\[BUF1+1\]  
+DEC CX  
+XOR DX,DX  
+MOV DL,\[SI\]  
+CMP2:CMP DL,\[SI+1\]  
+JGE PA21  
+MOV DL,\[SI+1\]  
+PA21:INC SI  
+LOOP CMP2  
+PA22:CALL BRK  
+CALL BRK  
+CALL BRK  
+MOV CX,DX  
+MOV DX,OFFSET MSG3  
+MOV AH,9  
+INT 21H  
+MOV DX,CX  
+MOV AH,02H  
+INT 21H  
+;  
+CALL BRK  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG2  
+MOV AH,9  
+INT 21H  
+MOV AH,08H  
+INT 21H  
+CALL BRK  
+CMP AL,1BH  
+JNZ STA2  
+;  
+EXT2:POP DI  
+POP SI  
+POP DX  
+POP CX  
+POP AX  
+RET  
+SUB2 ENDP  
+;  
+SUB3 PROC NEAR  
+PUSH AX  
+PUSH BX  
+PUSH CX  
+PUSH DX  
+PUSH SI  
+STA3:CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG1  
+MOV AH,09H  
+INT 21H  
+;  
+CALL FAR PTR INP  
+CMP BUF1+2,'$'  
+JE STA3  
+;  
+XOR BX,BX  
+XOR AX,AX  
+XOR CX,CX  
+MOV BL,\[BUF1+1\]  
+MOV FLAG3,-1  
+LP31:CMP FLAG3,0  
+JE EXT3  
+DEC BX  
+MOV CX,BX  
+MOV FLAG3,0  
+LEA SI,BUF1+2  
+LP32:MOV AL,\[SI\]  
+CMP AL,\[SI+1\]  
+JGE NEXT3  
+XCHG AL,\[SI+1\]  
+XCHG AL,\[SI\]  
+MOV FLAG3,-1  
+NEXT3:INC SI  
+LOOP LP32  
+JMP LP31  
+EXT3:CALL BRK  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG3  
+MOV AH,9  
+INT 21H  
+MOV DX,OFFSET BUF1+2  
+INT 21H  
+;  
+CALL BRK  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG2  
+MOV AH,9  
+INT 21H  
+MOV AH,08H  
+INT 21H  
+CALL BRK  
+CMP AL,1BH  
+JZ EXT33  
+JMP STA3  
+;  
+EXT33:POP SI  
+POP DX  
+POP CX  
+POP BX  
+POP AX  
+RET  
+SUB3 ENDP  
+;  
+SUB4 PROC NEAR  
+PUSH AX  
+PUSH DX  
+STA4:CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG4  
+MOV AH,09H  
+INT 21H  
+CALL FAR PTR INP  
+CMP BUF1+4,':'  
+JE PAS41  
+CMP BUF1+4,20H  
+JNE ERR4  
+PAS41:CMP BUF1+7,':'  
+JE PAS42  
+CMP BUF1+7,20H  
+JNE ERR4  
+PAS42:CMP BUF1+10,'$'  
+JNE ERR4  
+CALL STTM  
+CMP AL,0FFH  
+JE ERR4  
+CALL BRK  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG42  
+MOV AH,9  
+INT 21H  
+CALL BRK  
+CALL BRK  
+CALL BRK  
+CALL STIM  
+CALL BRK  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG2  
+MOV AH,9  
+INT 21H  
+MOV AH,08H  
+INT 21H  
+CMP AL,1BH  
+CALL BRK  
+JNZ STA4  
+JMP EXT4  
+ERR4:CALL BRK  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG41  
+MOV AH,9  
+INT 21H  
+CALL BRK  
+JMP STA4  
+EXT4:POP DX  
+POP AX  
+RET  
+SUB4 ENDP  
+;  
+SUB5 PROC NEAR  
+CALL BRK  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG5  
+MOV AH,09H  
+INT 21H  
+CALL BRK  
+CALL BRK  
+RET  
+SUB5 ENDP  
+;  
+SUB6 PROC NEAR  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MSG6  
+MOV AH,09H  
+INT 21H  
+CALL BRK  
+CALL BRK  
+RET  
+SUB6 ENDP  
+;  
+MENU PROC NEAR  
+PUSH AX  
+PUSH DX  
+CALL BRK  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MEN00  
+MOV AH,9  
+INT 21H  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MEN0  
+MOV AH,09H  
+INT 21H  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MEN1  
+MOV AH,09H  
+INT 21H  
+CALL BRK  
+MOV DX,OFFSET MEN2  
+MOV AH,09H  
+INT 21H  
+CALL BRK  
+MOV DX,OFFSET MEN3  
+MOV AH,09H  
+INT 21H  
+CALL BRK  
+MOV DX,OFFSET MEN4  
+MOV AH,09H  
+INT 21H  
+CALL BRK  
+MOV DX,OFFSET MEN5  
+MOV AH,09H  
+INT 21H  
+CALL BRK  
+CALL BRK  
+MOV DX,OFFSET MEN00  
+MOV AH,9  
+INT 21H  
+CALL BRK  
+CALL BRK  
+POP DX  
+POP AX  
+RET  
+MENU ENDP  
+;  
+BRK PROC NEAR  
+PUSH AX  
+PUSH DX  
+MOV AH,02H  
+MOV DL,0DH  
+INT 21H  
+MOV DL,0AH  
+INT 21H  
+POP DX  
+POP AX  
+RET  
+BRK ENDP  
+;  
+INP PROC FAR  
+PUSH AX  
+PUSH DX  
+PUSH BX  
+PUSH DI  
+PUSH SI  
+MOV DX,OFFSET BUF1  
+MOV AH,0AH  
+INT 21H  
+LEA SI,BUF1+1  
+XOR AX,AX  
+MOV AL,\[SI\]  
+ADD AX,OFFSET BUF1+2  
+MOV DI,AX  
+MOV BL,'$'  
+XCHG BL,\[DI\]  
+POP SI  
+POP DI  
+POP BX  
+POP DX  
+POP AX  
+RET  
+INP ENDP  
+;  
+BTA PROC NEAR  
+PUSH BX  
+MOV BL,10  
+DIV BL  
+ADD AL,'0′  
+MOV \[SI\],AL  
+ADD AH,'0′  
+MOV \[SI+1\],AH  
+POP BX  
+RET  
+BTA ENDP  
+;  
+GTIM PROC NEAR  
+PUSH AX  
+PUSH BX  
+PUSH CX  
+PUSH DX  
+PUSH SI  
+PUSH DI  
+MOV AH,2CH  
+INT 21H  
+;  
+XOR AX,AX  
+MOV AL,CH  
+LEA SI,TIMA  
+CALL BTA  
+XOR AX,AX  
+MOV AL,CL  
+ADD SI,3  
+CALL BTA  
+XOR AX,AX  
+MOV AL,DH  
+ADD SI,3  
+CALL BTA  
+;  
+POP DI  
+POP SI  
+POP DX  
+POP CX  
+POP BX  
+POP AX  
+RET  
+GTIM ENDP  
+;  
+STIM PROC NEAR  
+PUSH AX  
+PUSH BX  
+PUSH CX  
+PUSH DX  
+MOV DX,OFFSET MSG43  
+MOV AH,9  
+INT 21H  
+TIM4:CALL GTIM  
+MOV AH,03H  
+MOV BH,00H  
+INT 10H  
+MOV CX,DX  
+LEA DX,TIMA  
+MOV AH,09H  
+INT 21H  
+MOV DX,CX  
+MOV AH,02H  
+INT 10H  
+MOV CX,0  
+MOV AH,1  
+OR CH,00010000B  
+INT 10H  
+MOV BX,0018H  
+RE:MOV CX,0FFFFH  
+REA:LOOP REA  
+DEC BX  
+JNZ RE  
+MOV AH,0BH  
+INT 21H  
+CMP AL,00H  
+JE TIM4  
+MOV AH,0CH  
+MOV AL,0  
+INT 21H  
+MOV AH,01H  
+MOV CX,0001H  
+INT 10H  
+POP DX  
+POP CX  
+POP BX  
+POP AX  
+RET  
+STIM ENDP  
+STTM PROC NEAR  
+PUSH BX  
+PUSH CX  
+PUSH DX  
+PUSH SI  
+PUSH DI  
+LEA SI,BUF1+2  
+LEA DI,BUF1+2  
+MOV CX,8  
+LPST:MOV AL,\[SI\]  
+SUB AL,30H  
+XCHG AL,\[SI\]  
+INC SI  
+LOOP LPST  
+MOV BL,10  
+;  
+MOV AL,\[DI\]  
+MUL BL  
+ADD AL,\[DI\]+1  
+MOV CH,AL  
+;  
+ADD DI,3  
+MOV AL,\[DI\]  
+MUL BL  
+ADD AL,\[DI\]+1  
+MOV CL,AL  
+;  
+ADD DI,3  
+MOV AL,\[DI\]  
+MUL BL  
+ADD AL,\[DI\]+1  
+MOV DH,AL  
+XOR AX,AX  
+MOV DL,0  
+MOV AH,2DH  
+INT 21H  
+POP DI  
+POP SI  
+POP DX  
+POP CX  
+POP BX  
+RET  
+STTM ENDP  
+CODE ENDS  
+END START
+{% endhighlight %}
+
+This entry was posted on Thursday, November 16th, 2006 at 7:42 pm.
+
+---
+
+
+
+-EOF-

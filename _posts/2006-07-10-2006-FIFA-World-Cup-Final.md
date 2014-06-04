@@ -1,0 +1,43 @@
+---
+layout: post
+title: 2006 FIFA World Cup Final
+description: 2006 FIFA World Cup Final
+categories: Old
+tags: Old
+---
+06世界杯冠军终于诞生，意大利，又一个神奇的轮回。[![](http://192.168.1.222/blog/wp-content/uploads/photo/Archives/lazy-k-thumbs/2006wc_italia.jpg)](http://192.168.1.222/blog/wp-content/uploads/photo/Archives/2006wc_italia.jpg)
+
+虽说意大利也是夺冠热门之一，但相对大赛前被看好的巴西、阿根廷、英格兰之流，就没被太多人看好。而且，赛前意大利的国内联赛也饱受假球风波的煎熬......不过一切的猜测在这晚都烟消云散，冠军是属于意大利。
+
+在这天晚上，意大利在残酷的点球大战中击败了法国，举起了大力神杯。我们也不能只单看今晚的比赛，在小组赛意大利2比0击败了捷克，淘汰赛第一轮伟大的左后卫地搞垮了奇兵澳大利亚，第二轮轻取了乌克兰，第三轮加时最后2分钟又是伟大的左后卫狙击的东道主德国。冠军对于意大利也是当之无愧的。
+
+在这天晚上，失意的是法国，最最失意的是Zidane。一个头槌，一个红牌，让这位一代球王提前走出了球场。但法国也是无悔的，从连小组出线都艰难以第二出线，到迷糊地击败了西班牙，再霸气地赶走巴西，也实在难能可贵。
+
+[![](http://192.168.1.222/blog/wp-content/uploads/photo/Archives/lazy-k-thumbs/2006wc_zidane1.jpg)](http://192.168.1.222/blog/wp-content/uploads/photo/Archives/2006wc_zidane1.jpg) [![](http://192.168.1.222/blog/wp-content/uploads/photo/Archives/lazy-k-thumbs/2006wc_zidanered.jpg)](http://192.168.1.222/blog/wp-content/uploads/photo/Archives/2006wc_zidanered.jpg) [![](http://192.168.1.222/blog/wp-content/uploads/photo/Archives/lazy-k-thumbs/2006wc_zidane2.jpg)](http://192.168.1.222/blog/wp-content/uploads/photo/Archives/2006wc_zidane2.jpg)
+
+最后附上某大侠的短信：  
+_好难过。赛前我就一直叮嘱自己，无论是法国还是意大利，谁拿冠军都对得起他们这届大赛的拼搏表现，对得起他们这些年来坎坷的经历。我以为我已经做好了准备......但没想到是这样一个结果，一个比突然死亡还要突然的告别......我当时用了很大力气才把眼泪忍住。他可能不会感到后悔，因为他可能要保卫自己的尊严，以野蛮的方式。本来还有的鲜花和掌声，赛后的绕场告别，想尽可能记住的每一个举动，突然被改成了几秒。该来的还是来了，提前。_
+
+This entry was posted on Monday, July 10th, 2006 at 3:17 pm.
+
+---
+
+Ice Zero says 
+
+July 15th, 2006 at 10:40 pm
+
+我既德国队输比意大利无野讲,不过意大利今届打得几流氓下.
+
+Bigshow says 
+
+July 19th, 2006 at 12:13 am
+
+个位大侠系米甘大傻呀?
+
+cone says 
+
+July 19th, 2006 at 2:38 am
+
+大傻，又名大侠嘛，咔咔~
+
+-EOF-

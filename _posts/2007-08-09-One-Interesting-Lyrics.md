@@ -13,14 +13,11 @@ So why don't you try to fade out
 from your dream of dreamed.  
 Try to take the other risks.  
 Your life should not be like this.  
-Every color we can be.
+Every color we can be.  
+  
 
 很有意思的一段歌词，来自My Little Airport的Josephine's Shop。
 
-This entry was posted on Thursday, August 9th, 2007 at 1:26 am.
-
----
-
-
+2007年08月09日 星期四  01:26 A.M.
 
 -EOF-

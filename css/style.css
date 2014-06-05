@@ -416,11 +416,15 @@ hr {
 }
 
 .archive-year {
-  color: #dededc;
+  color: #b3b3b1;
   font-size: 18px;
   letter-spacing: 3px;
   line-height: 1.5;
   font-weight: 400;
+}
+
+.archive-year a {
+  color: #b3b3b1;
 }
 
 .archive-year:before {

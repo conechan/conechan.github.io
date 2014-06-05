@@ -8,18 +8,21 @@ permalink: /archive/
 <!-- main title end -->
 <!-- archive list start -->
 <div class="archive">
-  <ul>
   {% for post in site.posts %}
     {% capture y %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% capture prevy %}{{ post.previous.date | date: '%Y' }}{% endcapture %}
     {% if year != y %}
       {% assign year = y %}
-      <h2 class="archive-year">{{ y }}</h2>
+      <h2 class="archive-year" id="y{{y}}"><a href="#y{{y}}">{{ y }}</a></h2>
+      <ul id="year{{y}}" class="hidden">
     {% endif %}
-    <li>
-      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-      <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y年%m月%d日" }}</time>
-    </li>
+        <li>
+          <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+          <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y年%m月%d日" }}</time>
+        </li>
+    {% if year != prevy %}
+      </ul>
+    {% endif %}
   {% endfor %}
-  </ul>
 </div>
 <!-- archive list end-->

@@ -763,6 +763,10 @@ hr {
   #container .main-title {
     text-align: center;
   }
+  .footer {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 

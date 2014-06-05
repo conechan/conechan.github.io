@@ -11,8 +11,6 @@ Babylon是以色列的一个电子词典，主要特点是：除去词典外的�
 
 下图是对某专业词汇的解释：
 
-[![babylon.jpg](http://192.168.1.222/blog/wp-content/uploads/photo/Archives/lazy-k-slides/babylon.jpg)](http://192.168.1.222/blog/wp-content/uploads/photo/Archives/babylon.jpg)
-
 This entry was posted on Thursday, January 4th, 2007 at 2:27 pm.
 
 ---

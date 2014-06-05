@@ -11,8 +11,6 @@ tags: Old
   
 最后我也逃不掉被BS的命运。  
   
-![](http://img.baidu.com/hi/face/i_f12.gif)
-
 2007年12月02日 星期日  02:49 A.M.
 
 -EOF-

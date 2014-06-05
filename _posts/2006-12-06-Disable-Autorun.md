@@ -5,7 +5,7 @@ description: 关闭autorun，远离U盘病毒
 categories: Old
 tags: Old
 ---
-在"开始"菜单的"运行"中输入Regedit，打开注册表编辑器，展开到HKEY\_CURRENT\_USER\\Software\\Microsoft＼Windows＼CurrentVersion＼ Policies＼Exploer主键下，在右侧窗格中找到"NoDriveTypeAutoRun"，就是这个键决定了是否执行CDROM或硬盘的 AutoRun功能。把NoDriveTypeAutoRun的值改为 FF,00,00,00。
+在"开始"菜单的"运行"中输入Regedit，打开注册表编辑器，展开到HKEY\_CURRENT\_USER＼Software＼Microsoft＼Windows＼CurrentVersion＼ Policies＼Exploer主键下，在右侧窗格中找到"NoDriveTypeAutoRun"，就是这个键决定了是否执行CDROM或硬盘的 AutoRun功能。把NoDriveTypeAutoRun的值改为 FF,00,00,00。
 
 **最后切记请勿双击打开，要用右键--打开。**
 

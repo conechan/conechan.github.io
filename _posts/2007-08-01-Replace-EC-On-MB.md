@@ -17,15 +17,9 @@ tags: Old
   
 拆下来的爆浆电容（其实没怎么爆）  
 
-![](http://hiphotos.baidu.com/vcone/pic/item/ed8df252e1c5fb060df3e30f.jpg)  
-  
 换好后的新电容
 
-![](http://hiphotos.baidu.com/vcone/pic/item/1ca6b30044b24719728b65f3.jpg)
-  
 好难看的焊点（其实是松香）
-
-![](http://hiphotos.baidu.com/vcone/pic/item/c2ed3bee529fdcf3b3fb9512.jpg)
 
 2007年08月01日 星期三  04:42 P.M.
 

@@ -13,7 +13,7 @@ MOV AH,1
 INT 10H
 {% endhighlight %}
 
-`MOV AH,1，INT 10H`是设定光标大小的中断。而`CX=1000H`暂时还搞不清什么原理。。
+`MOV AH,1，INT 10H` 是设定光标大小的中断。而 `CX=1000H` 暂时还搞不清什么原理。。
 
 This entry was posted on Thursday, November 16th, 2006 at 7:34 pm.
 

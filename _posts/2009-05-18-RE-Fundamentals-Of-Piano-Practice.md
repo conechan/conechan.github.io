@@ -12,13 +12,9 @@ tags: Old
   
 中文资料  
 [http://bbs.popiano.org/viewthread.php?tid=81448&extra=page%3D1%26amp%3Bfilter%3Ddigest][1]  
-[流行钢琴社区][2]![](http://bbs.popiano.org/images/common/jsmenu.gif) ? [『演奏之道』][3] ? 介绍"基础钢琴练习法" (I)  
-
 
 [0]: http://www.pianopractice.org/
 [1]: http://bbs.popiano.org/viewthread.php?tid=81448&extra=page%3D1%26amp%3Bfilter%3Ddigest
-[2]: http://bbs.popiano.org/index.php
-[3]: http://bbs.popiano.org/forumdisplay.php?fid=106&page=1&filter=digest
 
 Mon, 18 May 2009 15:29:30
 

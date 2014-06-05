@@ -44,13 +44,14 @@ This entry was posted on Sunday, July 23rd, 2006 at 1:16 pm.
 February 19th, 2007 at 12:03 pm
 
 在网络里无意中搜索到你的文章，感怀于时光流逝中，自己曾经在你的进步中竟然也有一点点的痕迹，所以在我的两个站里转载你这文章，也算是纪念我的电台生涯里，朋友们的一些留念话语。谢谢你这么念旧，有机会联系吧。
-转载地址：http://www.qpg901.com
-http://www.dj901.com
+转载地址：  
+[http://www.qpg901.com](http://www.qpg901.com)  
+[http://www.dj901.com](http://www.dj901.com)
 
 cone's blog » 来自碧云姐姐的留言 says 
 
 February 25th, 2007 at 2:41 am
 
-\[...\] 《与designer擦肩》原文：http://192.168.1.222/blog/html/28.html \[...\]
+[《与designer擦肩》原文](/2006/07/23/Bypass-Designer/)
 
 -EOF-

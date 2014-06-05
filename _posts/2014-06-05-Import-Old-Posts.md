@@ -16,7 +16,7 @@ tags: Blog
 - html-md，一个转换 HTML 到 Markdown 的包，效果不错。
 - iconv-lite，用来转码的包，如果页面是 GBK 而不是 UTF8， 就要用到了。
 
-我以前在百步梯空间上的 WordPress，是通过 aReal-Html-Cache 插件备份出来的 HTML，具体看此文：[在FreeBSD上搭建"FAMP"平台恢复Wordpress的文章（下）](/2007/08/14/Wordpress-Recover-On-FAMP-P2)。然后在百度空间上备份出来的，也是 HTML，忘了当时是怎么导出的了。昨天回去重新激活百度空间，发现以前所有文章已经被清空，不错。。然后在网易博客上备份出来的，是 XML，其实就是 RSS 订阅。所以基本上能 RSS 订阅全文的博客空间，都可以比较容易转换成 Markdown。Jekyll 也提供 RSS 转 post 的工具，但感觉功能比较基础，例如文章的准确时间没法读出，所以就自己动手写个 parser 了，其实也不难，几十行的玩意。最后 QQ 空间上的几篇，懒得折腾，手动解决了。。
+我以前在百步梯空间上的 WordPress，是通过 aReal-Html-Cache 插件备份出来的 HTML，具体看此文：[在FreeBSD上搭建"FAMP"平台恢复Wordpress的文章（下）](/2007/08/14/WordPress-Recover-On-FAMP-P2)。然后在百度空间上备份出来的，也是 HTML，忘了当时是怎么导出的了。昨天回去重新激活百度空间，发现以前所有文章已经被清空，不错。。然后在网易博客上备份出来的，是 XML，其实就是 RSS 订阅。所以基本上能 RSS 订阅全文的博客空间，都可以比较容易转换成 Markdown。Jekyll 也提供 RSS 转 post 的工具，但感觉功能比较基础，例如文章的准确时间没法读出，所以就自己动手写个 parser 了，其实也不难，几十行的玩意。最后 QQ 空间上的几篇，懒得折腾，手动解决了。。
 
 脚本很简单，就是用 cheerio 爬导出来的 HTML 或者 XML，找到对应的内容，用正则表达式处理一下（这次也顺道温习巩固了正则表达式的使用），最后整合生成 Jekyll 的 post 格式即可。正文部分可以用 html-md 转一下，那就不用自己麻烦写个 parser 了。这里有个小坑，貌似所有开源的 HTML parser 都不能正确爬出带有特殊字符的文本，例如 \>\_\<，这个需要自己先转义一下再交给 parser 了。
 

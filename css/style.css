@@ -682,6 +682,14 @@ hr {
   text-align: center;
 }
 
+#page-wrapper h2 {
+  font-size: 20px;
+}
+
+#page-wrapper h3 {
+  font-size: 18px;
+}
+
 #page-wrapper h6 {
   text-align: center;
   margin: 0;
@@ -923,9 +931,9 @@ hr {
     border-bottom: none;
   }
 
-  a[href]:after {
+/*  a[href]:after {
     content: " (" attr(href) ")";
-  }
+  }*/
 
   abbr[title]:after {
     content: " (" attr(title) ")";
@@ -974,7 +982,11 @@ hr {
   }
 
   h2,
-  h3 {
+  h3,
+  ul,
+  li {
+    page-break-inside: avoid;
+    page-break-before: avoid;
     page-break-after: avoid;
   }
 

@@ -24,25 +24,25 @@ OSX的文件系统是HFS+格式，现代Windows的文件系统是NTFS格式。OS
 
 动手了，把硬盘上原来的数据备份好，然后把分区全部删掉（新买的硬盘就忽略这步），用OSX里的磁盘工具（spotlight搜“磁盘工具”打开）重新划分。
 
-![分区](http://ww4.sinaimg.cn/mw600/547806e8jw1e0bxt67cljj.jpg "分区")
+![分区](/img/post/2012-12-30-macbook-air-hd/01.jpg "分区")
 
 插个话题，为毛一定要在OSX里分区呢？在Windows里分区不行吗？这个，是有关于分区表的问题。我们PC上的硬盘一般都是使用MBR分区表，Windows下面默认初始化硬盘也是使用MBR分区表。这是个旧时代的产物，有些局限性，主要是硬盘上的主分区（Primary）不能多于4个，还有对超大硬盘支持不好（2TB限制）。而在Mac下，硬盘都是用新时代的GPT分区表（GUID）。不过GPT分区表的硬盘也有局限性，就是不能在BIOS的机器上作启动盘（装系统），只能在EFI（EFI是用来取代BIOS的）的机器上启动。其实Windows下面也能把硬盘转换成GPT分区表，不过还是直接在Mac下分区来得省事吧。
 
 回到正题。分好区后，就按方案把各个分区格式化成想要的格式。在左边选择分区，在右边的“抹掉”标签页里选格式，抹掉。
 
-![ExFAT](http://ww2.sinaimg.cn/mw600/547806e8jw1e0bxt2hyidj.jpg "ExFAT格式")
+![ExFAT](/img/post/2012-12-30-macbook-air-hd/02.jpg "ExFAT格式")
 
 接着，制作OSX的安装盘。先要搞到系统的image，我的方法是在App Store下载Mountain Lion系统，然后在安装包里把InstallESD.dmg复制出来。在左边选择“恢复”标签页，把InstallESD.dmg拖到源磁盘，把对应的移动硬盘上的分区拖到目的磁盘，恢复。
 
-![OSX安装盘](http://ww1.sinaimg.cn/mw600/547806e8jw1e0bxt9ln5dj.jpg "OSX安装盘")
+![OSX安装盘](/img/post/2012-12-30-macbook-air-hd/03.jpg "OSX安装盘")
 
 最后，制作Time Machine备份盘。打开Time Machine的偏好设置，选择磁盘，然后选择对应的分区。
 
-![Time Machine](http://ww2.sinaimg.cn/mw600/547806e8jw1e0bxtda4lqj.jpg "Time Machine")
+![Time Machine](/img/post/2012-12-30-macbook-air-hd/04.jpg "Time Machine")
 
 关于Time Machine，还有要注意的地方。首先，是排除一些不需要备份的文件夹，免得备份过大，下面是我自己的设置（那些文件都在PC上有存档，仅供参考）。
 
-![Time Machine设置](http://ww1.sinaimg.cn/mw600/547806e8jw1e0bzo4r1n1j.jpg "Time Machine 设置")
+![Time Machine设置](/img/post/2012-12-30-macbook-air-hd/05.jpg "Time Machine 设置")
 
 然后最最重要的，**禁止Time Machine本地备份**。因为当移动硬盘没接上的时候，Time Machine就会默默地往你宝贵的SSD空间上备份了……在终端窗口输入如下命令禁止掉。
 

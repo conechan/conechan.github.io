@@ -989,9 +989,9 @@ hr {
   h3,
   ul,
   li {
-    page-break-inside: avoid;
-    page-break-before: avoid;
-    page-break-after: avoid;
+    page-break-inside: auto;
+    page-break-before: auto;
+    page-break-after: auto;
   }
 
   #sidebar,

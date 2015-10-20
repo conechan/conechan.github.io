@@ -16,15 +16,15 @@ tags: charset
 
 网页的编码，其实在我们保存文件的时候，就已经确认了。我们用编辑器（例如 Sublime）打开网页文件，其实是可以看到网页文件的真实编码的。对于 Sublime，需要在配置文件设置 `"show_encoding": true`。如图所示，这个其实就是网页的真实编码了（注：因为 Sublime 其实原生不支持 GBK 的，这里显示的 Windows 1252 其实就是 GBK 啦）。
 
-![Sublime](/img/post/2015-10-20-chaset-trivial/charset-1.jpg "Sublime")
+![Sublime](/img/post/2015-10-20-charset-trivial/charset-1.jpg "Sublime")
 
 产生乱码，其实就是网页的解码过程出现了问题。那么，网页的解码是由什么因素决定的呢？首先，很显然，跟它自身的编码是完全没关系的。道理也很简单，一张碟片能不能播放正确，显然跟它是什么格式是没有关系的，而是人们怎么去处理它。好了，不卖关子了，决定网页解码的第一关键要素，是浏览器。我们可以从浏览器菜单可以选择网页的编码，从而让浏览器以什么样的编码去解析网页。坑爹啊，我不可能每打开一个网页都选一次吧。没错，所以一般浏览器都是设置成自动识别的。那么，决定浏览器自动识别编码的第一要素是啥呢？答案是服务器。服务器返回网页给浏览器，在 http 返回的头部，可以带有 charset 信息，这个 charset 信息，是存放在 Content-Type 属性里的。如下图。
 
-![Content-Type](/img/post/2015-10-20-chaset-trivial/charset-1.jpg "Content-Type")
+![Content-Type](/img/post/2015-10-20-charset-trivial/charset-2.jpg "Content-Type")
 
 注意，刚刚说的，http 返回头是可以带有 charset 信息，所以，也就是可以不带了。卧槽，这碟片贩子太不负责任了！还好，碟片有包装，我们还是可以知道是什么碟子。决定浏览器自动识别编码的第二要素，是网页 `head` 里的 `<meta charset="xxx">`。很多同学，以为这个 meta 信息决定了网页的编码，这是个很错误的理解。重复一下，决定网页编码，是在你保存文件选择格式时发生的（录制碟片），而这个 meta 信息，只是个告诉浏览器的信息（只是个包装）。所以，当浏览器发现 http 返回头没有 charset 信息时，就会去找 meta 里的 charset 信息。如下图。
 
-![meta](/img/post/2015-10-20-chaset-trivial/charset-1.jpg "meta")
+![meta](/img/post/2015-10-20-charset-trivial/charset-3.jpg "meta")
 
 如果这个碟片（网页）连包装（meta 信息）都木有，那会怎么样呢？这时，浏览器会根据自身内部机制去选取一种编码来解码页面。显然，这是完全不可控的。因为不同的系统（Win、Android、iOS、Mac），不同的系统语言（中文、英文），不同的浏览器（IE6、7、8、9、10、11、Chrome、FireFox、Safari），这些不同再组合出不同三次方的组合，会有不同的行为（其实就两种结果：乱码和正确）。当然，这是我们不希望看到的情况。
 

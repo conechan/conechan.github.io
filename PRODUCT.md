@@ -1,7 +1,7 @@
 # cone.cc
 
 ## Platform
-Web; static personal blog deployed to conechan.pages.dev.
+Web; static personal blog targeting conechan.pages.dev. Deployment is pending GitHub write permissions.
 
 ## Stack
 Astro, React islands, Apps SDK UI and Tailwind CSS. User explicitly requested this migration and deployment.

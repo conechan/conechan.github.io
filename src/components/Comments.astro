@@ -1,0 +1,23 @@
+---
+interface Props { path: string; title: string }
+const { path, title } = Astro.props;
+---
+<section class="comments" data-pagefind-ignore data-comment-path={path} data-comment-title={title}>
+  <button class="comments-toggle" type="button">查看原有评论</button>
+  <p>点击后加载 Disqus 评论。</p>
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-comment-path]').forEach((section) => {
+    section.querySelector('button')?.addEventListener('click', () => {
+      const path = section.dataset.commentPath || '/';
+      // Original embeds inferred the URL from cone.cc; keep that thread identity.
+      (window as Window & { disqus_config?: () => void }).disqus_config = function (this: { page: { url: string; title: string } }) { this.page.url = `http://cone.cc${path}`; this.page.title = section.dataset.commentTitle || ''; };
+      const script = document.createElement('script'); script.src = 'https://conecc.disqus.com/embed.js'; script.async = true; script.setAttribute('data-timestamp', String(Date.now()));
+      const button = section.querySelector('button');
+      if (button) { button.textContent = '正在加载评论…'; button.disabled = true; }
+      script.onerror = () => { const message = section.querySelector('p'); if (message) message.textContent = '评论暂时无法加载，请稍后刷新重试。'; };
+      document.body.append(script);
+    }, { once: true });
+  });
+</script>

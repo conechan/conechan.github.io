@@ -1,0 +1,13 @@
+{
+  "name": "cone.cc single-column archive",
+  "mode": "read",
+  "reference": "https://maintao.com/ (user supplied)",
+  "tokens": {
+    "surface": "#ffffff",
+    "text": "#292b2e",
+    "muted": "#676c71",
+    "link": "#34688e",
+    "readingWidth": "720px",
+    "radius": "10px"
+  }
+}

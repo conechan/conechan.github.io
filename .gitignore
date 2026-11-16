@@ -8,3 +8,11 @@ cv-en.md
 img/cv_avatar_2014.jpg
 img/cv_avatar_2015.jpg
 rename.js
+node_modules/
+dist/
+.astro/
+.wrangler/
+public/img/
+public/favicon.ico
+.impeccable/review/
+.impeccable/concept-seeds/

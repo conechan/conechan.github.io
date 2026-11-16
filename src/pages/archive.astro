@@ -1,0 +1,6 @@
+---
+import Site from '../layouts/Site.astro';
+import Archive from '../components/Archive.astro';
+import { posts } from '../lib/posts.mjs';
+---
+<Site title="归档"><div class="page-heading"><h1>归档</h1><p>{posts.at(-1)?.year}—{posts[0].year}，共 {posts.length} 篇文章。</p></div><Archive posts={posts} /></Site>

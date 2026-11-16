@@ -1,0 +1,6 @@
+---
+import Site from '../layouts/Site.astro';
+import Archive from '../components/Archive.astro';
+import { posts } from '../lib/posts.mjs';
+---
+<Site><h1 class="sr-only">cone.cc 随笔</h1><Archive posts={posts} /></Site>

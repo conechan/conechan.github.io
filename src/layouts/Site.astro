@@ -1,0 +1,60 @@
+---
+import SiteTools from '../components/SiteTools';
+import '../styles/global.css';
+interface Props { title?: string; description?: string; article?: boolean; noindex?: boolean }
+const { title, description = 'cone.cc · 随笔、技术、旅行与音乐。', article = false, noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title ? `${title} · cone.cc` : 'cone.cc'}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="alternate" type="application/atom+xml" title="cone.cc" href="/atom.xml" />
+    <meta property="og:title" content={title || 'cone.cc'} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:url" content={canonical} />
+    <meta name="color-scheme" content="light dark" />
+    <script is:inline>
+      try {
+        const saved = localStorage.getItem('cone-theme') || 'system';
+        document.documentElement.dataset.theme = saved === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : saved;
+      } catch { document.documentElement.dataset.theme = 'light'; }
+    </script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">跳到正文</a>
+    <div class="site-shell">
+      <header class="site-header" data-pagefind-ignore>
+        <a class="wordmark" href="/" aria-label="cone.cc 首页">cone<span>.cc</span></a>
+        <div class="header-bottom">
+          <nav class="primary-nav" aria-label="主导航">
+            <a href="/" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>随笔</a>
+            <a href="/archive/" aria-current={Astro.url.pathname.startsWith('/archive') ? 'page' : undefined}>归档</a>
+            <a href="/about/" aria-current={Astro.url.pathname.startsWith('/about') ? 'page' : undefined}>关于</a>
+            <a href="/atom.xml">订阅</a>
+          </nav>
+          <SiteTools client:load />
+        </div>
+      </header>
+      <main id="main" tabindex="-1"><slot /></main>
+      <footer class="site-footer" data-pagefind-ignore>
+        <span>© {new Date().getUTCFullYear()} cone.cc</span>
+        <div><a href="https://github.com/conechan/conechan.github.io">GitHub</a><span aria-hidden="true">·</span><a href="#top" data-back-top>回到顶部</a></div>
+      </footer>
+    </div>
+    <script>
+      document.querySelector('[data-back-top]')?.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+        document.querySelector<HTMLAnchorElement>('.wordmark')?.focus({ preventScroll: true });
+      });
+    </script>
+  </body>
+</html>

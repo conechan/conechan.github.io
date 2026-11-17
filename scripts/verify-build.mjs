@@ -10,7 +10,7 @@ for (const post of posts) {
   const html = readFileSync(file, 'utf8');
   assert(!/{%\s*(?:end)?highlight/.test(html), `Unconverted Liquid block: ${post.file}`);
 }
-for (const path of ['index.html', 'archive/index.html', 'about/index.html', '404.html', 'atom.xml', 'sitemap.xml', 'robots.txt', 'pagefind/pagefind.js']) assert(existsSync(`dist/${path}`), `Missing output: ${path}`);
+for (const path of ['index.html', 'archive/index.html', 'about/index.html', '404.html', 'atom.xml', 'sitemap.xml', 'robots.txt']) assert(existsSync(`dist/${path}`), `Missing output: ${path}`);
 const assets = JSON.parse(readFileSync('scripts/assets.json', 'utf8'));
 for (const asset of assets) assert.deepEqual(readFileSync(`dist/${asset}`), readFileSync(asset), `Asset bytes changed: ${asset}`);
-console.log(`Verified ${posts.length} preserved article routes, ${assets.length} byte-identical assets, feed, search and error page.`);
+console.log(`Verified ${posts.length} preserved article routes, ${assets.length} byte-identical assets, feed and error page.`);

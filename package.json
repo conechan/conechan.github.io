@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npm run build && astro dev --host 127.0.0.1",
-    "build": "node scripts/prepare-assets.mjs && astro build && pagefind --site dist && node scripts/verify-build.mjs",
+    "dev": "node scripts/prepare-assets.mjs && astro dev --host 127.0.0.1",
+    "build": "node scripts/prepare-assets.mjs && astro build && node scripts/verify-build.mjs",
     "preview": "astro preview --host 127.0.0.1",
     "check": "astro check",
     "test": "node --test tests/*.test.mjs"
@@ -32,7 +32,6 @@
     "@types/markdown-it": "14.2.0",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "pagefind": "1.6.0",
     "typescript": "6.0.3"
   },
   "overrides": {

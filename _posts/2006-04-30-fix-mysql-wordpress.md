@@ -7,7 +7,7 @@ tags: Old
 ---
 修改文件"WordPress/wp-includes/wp-db.php"，在第58行添加下边两行：
 
-{% highlight console %}
+{% highlight php %}
 mysql_query("SET NAMES 'UTF8'");  
 mysql_query("SET CHARACTER SET UTF8"); 
 {% endhighlight %}

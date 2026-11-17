@@ -9,6 +9,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
+    <!-- Establish cascade order before SDK component styles can register a layer. -->
+    <style is:inline>@layer properties, theme, base, components, utilities;</style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title ? `${title} · cone.cc` : 'cone.cc'}</title>
     <meta name="description" content={description} />
@@ -33,20 +35,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <div class="site-shell">
       <header class="site-header" data-pagefind-ignore>
         <a class="wordmark" href="/" aria-label="cone.cc 首页">cone<span>.cc</span></a>
-        <div class="header-bottom">
-          <nav class="primary-nav" aria-label="主导航">
-            <a href="/" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>随笔</a>
-            <a href="/archive/" aria-current={Astro.url.pathname.startsWith('/archive') ? 'page' : undefined}>归档</a>
-            <a href="/about/" aria-current={Astro.url.pathname.startsWith('/about') ? 'page' : undefined}>关于</a>
-            <a href="/atom.xml">订阅</a>
-          </nav>
-          <SiteTools client:load />
-        </div>
+        <SiteTools client:load />
       </header>
       <main id="main" tabindex="-1"><slot /></main>
       <footer class="site-footer" data-pagefind-ignore>
         <span>© {new Date().getUTCFullYear()} cone.cc</span>
-        <div><a href="https://github.com/conechan/conechan.github.io">GitHub</a><span aria-hidden="true">·</span><a href="#top" data-back-top>回到顶部</a></div>
+        <div><a href="#top" data-back-top>回到顶部</a></div>
       </footer>
     </div>
     <script>

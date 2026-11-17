@@ -2,10 +2,11 @@ import { readdirSync, readFileSync } from 'node:fs';
 import matter from 'gray-matter';
 import MarkdownIt from 'markdown-it';
 import anchor from 'markdown-it-anchor';
-import { createHighlighter } from 'shiki';
+import { bundledLanguages, bundledLanguagesAlias, createHighlighter } from 'shiki';
 
 // Astro bundles this module into dist/.prerender; source paths stay project-relative.
 const root = process.cwd();
+const postFiles = readdirSync(`${root}/_posts`).filter((file) => file.endsWith('.md'));
 export const categoryNames = { Tech: '技术', Travel: '旅行', Music: '音乐', Life: '生活', Old: '旧时光' };
 export const categoryLabel = (name) => categoryNames[name] || name;
 const list = (value) => Array.isArray(value) ? value.map(String) : String(value || '').split(/\s+/).filter(Boolean);
@@ -23,11 +24,72 @@ export function normalizeLegacyMarkdown(content) {
     .replace(/{%\s*endhighlight\s*%}/g, '\n```\n');
 }
 
-const highlighter = await createHighlighter({ themes: ['github-light', 'github-dark'], langs: ['javascript', 'typescript', 'html', 'css', 'json', 'shell', 'php', 'c', 'asm', 'yaml', 'text'] });
+const languageAliases = { nasm: 'asm', console: 'shell' };
+const resolveLanguage = (language) => languageAliases[language] || language;
+const languageScanner = new MarkdownIt({ html: true });
+const languages = new Set(['text']);
+for (const file of postFiles) {
+  const { content } = matter(readFileSync(`${root}/_posts/${file}`, 'utf8'));
+  for (const token of languageScanner.parse(normalizeLegacyMarkdown(content), {})) {
+    if (token.type !== 'fence') continue;
+    const language = resolveLanguage(token.info.trim().split(/\s+/)[0]);
+    if (Object.hasOwn(bundledLanguages, language) || Object.hasOwn(bundledLanguagesAlias, language)) languages.add(language);
+  }
+}
+const highlighter = await createHighlighter({ themes: ['github-light', 'github-dark'], langs: [...languages] });
 const md = new MarkdownIt({ html: true, linkify: true, typographer: false, highlight(code, language) {
-  const lang = language === 'nasm' ? 'asm' : language;
+  const lang = resolveLanguage(language);
   return highlighter.codeToHtml(code, { lang: highlighter.getLoadedLanguages().includes(lang) ? lang : 'text', themes: { light: 'github-light', dark: 'github-dark' } });
 } }).use(anchor, { slugify: (s) => s.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\p{L}\p{N}_-]/gu, '') });
+
+// Photo captions use //YYYY.MM.DD as a separator, not a protocol-relative URL.
+const validateLink = md.validateLink;
+md.validateLink = (url) => !/^\/\/\d{4}\.\d{1,2}\.\d{1,2}$/.test(url) && validateLink(url);
+
+// Redcarpet accepted ATX headings without a space after '#'. Keep that
+// historical syntax in the block parser so fenced/indented code stays intact.
+md.block.ruler.before('heading', 'legacy_heading', (state, startLine, _endLine, silent) => {
+  if (state.sCount[startLine] - state.blkIndent >= 4) return false;
+  const start = state.bMarks[startLine] + state.tShift[startLine];
+  const match = /^(#{1,6})(?!#)(\S.*)$/.exec(state.src.slice(start, state.eMarks[startLine]));
+  if (!match) return false;
+  if (silent) return true;
+  const markup = match[1];
+  state.line = startLine + 1;
+  const opening = state.push('heading_open', `h${markup.length}`, 1);
+  opening.markup = markup;
+  opening.map = [startLine, state.line];
+  const inline = state.push('inline', '', 0);
+  inline.content = match[2].replace(/[\t ]+#+[\t ]*$/, '').trim();
+  inline.map = [startLine, state.line];
+  inline.children = [];
+  const closing = state.push('heading_close', `h${markup.length}`, -1);
+  closing.markup = markup;
+  return true;
+}, { alt: ['paragraph', 'reference', 'blockquote'] });
+
+// Older Chinese posts use **标点：**正文 and a space before the closing **.
+// Relax only those plain-text cases; leave nested markup to the standard rule.
+md.inline.ruler.before('emphasis', 'legacy_chinese_strong', (state, silent) => {
+  const match = /^\*\*([^\s*][^*\n]*?)\*\*/.exec(state.src.slice(state.pos));
+  if (!match) return false;
+  const content = match[1];
+  const following = state.src[state.pos + match[0].length] || '';
+  if (!/\p{Script=Han}/u.test(content) || /[\\`_<>\[\]]/.test(content)) return false;
+  const legacyClosingSpace = /[\t ]+$/.test(content);
+  const legacyPunctuation = /\p{P}$/u.test(content) && /[\p{L}\p{N}]/u.test(following);
+  if (!legacyClosingSpace && !legacyPunctuation) return false;
+  if (!silent) {
+    const opening = state.push('strong_open', 'strong', 1);
+    opening.markup = '**';
+    const text = state.push('text', '', 0);
+    text.content = content;
+    const closing = state.push('strong_close', 'strong', -1);
+    closing.markup = '**';
+  }
+  state.pos += match[0].length;
+  return true;
+});
 
 export function renderMarkdown(content) {
   const tokens = md.parse(normalizeLegacyMarkdown(content), {});
@@ -42,7 +104,7 @@ export function renderMarkdown(content) {
 
 const strip = (s) => s.replace(/<[^>]*>/g, ' ').replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/[`#*_>{}]/g, '').replace(/\s+/g, ' ').trim();
 
-export const posts = readdirSync(`${root}/_posts`).filter((f) => f.endsWith('.md')).map((file) => {
+export const posts = postFiles.map((file) => {
   const raw = readFileSync(`${root}/_posts/${file}`, 'utf8');
   const { data, content } = matter(raw);
   const identity = postIdentity(file);

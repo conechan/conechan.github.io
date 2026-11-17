@@ -1,35 +1,33 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
-import { readFile } from 'node:fs/promises';
-import { resolve, sep } from 'node:path';
+import { resolve } from 'node:path';
 
-function localSearchIndex() {
+function watchArticleSources() {
   return {
-    name: 'local-pagefind-index',
+    name: 'watch-article-sources',
     configureServer(server) {
-      server.middlewares.use('/pagefind', async (req, res, next) => {
-        const directory = resolve('dist/pagefind');
-        const path = resolve(directory, `.${decodeURIComponent((req.url || '/').split('?')[0])}`);
-        if (!path.startsWith(directory + sep)) return next();
-        try {
-          const data = await readFile(path);
-          const type = path.endsWith('.js') ? 'application/javascript' : path.endsWith('.json') ? 'application/json' : 'application/octet-stream';
-          res.setHeader('Content-Type', type);
-          res.end(data);
-        } catch { next(); }
+      server.watcher.add([resolve('_posts'), resolve('about.md')]);
+      server.watcher.on('all', (event, file) => {
+        if (!['add', 'change', 'unlink'].includes(event)) return;
+        if (!file.startsWith(resolve('_posts') + '/') && file !== resolve('about.md')) return;
+        // The legacy loader reads Markdown with fs, outside Vite's import graph.
+        for (const environment of Object.values(server.environments)) {
+          const modules = environment.moduleGraph.getModulesByFile(resolve('src/lib/posts.mjs'));
+          for (const module of modules || []) environment.moduleGraph.invalidateModule(module);
+        }
+        server.ws.send({ type: 'full-reload' });
       });
     },
   };
 }
-
 export default defineConfig({
   site: 'https://conechan.pages.dev',
   output: 'static',
   trailingSlash: 'ignore',
   integrations: [react()],
   vite: {
-    plugins: [tailwindcss(), localSearchIndex()],
+    plugins: [tailwindcss(), watchArticleSources()],
     // Apps SDK UI publishes extensionless ESM imports. Let Vite resolve them
     // while prerendering rather than asking Node's stricter ESM resolver.
     environments: {

@@ -1,16 +1,16 @@
 ---
 import Site from '../layouts/Site.astro';
 import Comments from '../components/Comments.astro';
-import { posts, formatDate, categoryLabel } from '../lib/posts.mjs';
+import { posts, formatDate } from '../lib/posts.mjs';
 export function getStaticPaths() { return posts.map((post, index) => ({ params: { path: post.path }, props: { post, previous: posts[index + 1], next: posts[index - 1] } })); }
 const { post, previous, next } = Astro.props;
 ---
 <Site title={post.title} description={post.description} article>
   <article data-pagefind-body>
     <header class="article-heading">
-      <a class="back-link" href={`/#y${post.year}`} data-pagefind-ignore>返回随笔</a>
+      <a class="back-link" href={`/#y${post.year}`} data-pagefind-ignore>返回</a>
       <h1 data-pagefind-meta="title">{post.title}</h1>
-      <div class="article-meta"><time datetime={post.date}>{formatDate(post.date)}</time><span aria-hidden="true">·</span><span>{post.minutes} 分钟阅读</span>{post.categories.map((category) => <><span aria-hidden="true">·</span><a href={`/category/${category.toLowerCase()}/`}>{categoryLabel(category)}</a></>)}</div>
+      <div class="article-meta"><time datetime={post.date}>{formatDate(post.date)}</time></div>
     </header>
     {post.headings.length >= 4 && <details class="article-toc" data-pagefind-ignore><summary>文章目录</summary><nav aria-label="文章目录"><ul>{post.headings.map((heading) => <li class:list={{ nested: heading.depth === 3 }}><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ul></nav></details>}
     <div class="prose" set:html={post.html} />

@@ -42,14 +42,14 @@ GitLab 有两种版本：源码版本和 Omnibus 版本。源码版本就是直�
 
 GitLab 服务
 
-```
+```shell
 root@mkt-git-01:~# service gitlab 
 Usage: service gitlab {start|stop|restart|reload|status}
 ```
 
 Nginx 服务
 
-```
+```shell
 root@mkt-git-01:~# service nginx 
 Usage: nginx {start|stop|restart|reload|force-reload|status|configtest}
 ```
@@ -100,13 +100,13 @@ GitLab 的 Rake Task 需要 su 到 git 用户，然后在 /home/git/gitlab 目�
 
 ### 查 GitLab 信息
 
-```
+```shell
 bundle exec rake gitlab:env:info RAILS_ENV=production
 ```
 
 ### 检查 GitLab 配置
 
-```
+```shell
 bundle exec rake gitlab:check RAILS_ENV=production
 ```
 

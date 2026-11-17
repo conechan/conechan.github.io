@@ -1,47 +1,15 @@
 ---
-import { categoryLabel } from '../lib/posts.mjs';
 interface Post { year: string; date: string; url: string; title: string; categories: string[] }
-interface Props { posts: Post[]; showFilters?: boolean }
-const { posts, showFilters = true } = Astro.props;
+interface Props { posts: Post[] }
+const { posts } = Astro.props;
 const years = [...new Set(posts.map((post) => post.year))];
-const cats = [...new Set(posts.flatMap((post) => post.categories))];
 ---
-<div class="archive" data-archive>
-  {showFilters && <div class="archive-tools" data-pagefind-ignore>
-    <div class="category-filter" aria-label="筛选分类">
-      <button type="button" class="filter-button" data-filter="all" aria-pressed="true">全部</button>
-      {cats.map((category) => <button type="button" class="filter-button" data-filter={category} aria-pressed="false">{categoryLabel(category)}</button>)}
-    </div>
-    <span class="article-count" data-count>{posts.length} 篇</span>
-  </div>}
-  <nav class="year-nav" aria-label="跳转到年份" data-pagefind-ignore>{years.map((year) => <a href={`#y${year}`}>{year}</a>)}</nav>
+<div class="archive">
   {years.map((year) => <section class="year-section" aria-labelledby={`y${year}`}>
     <h2 class="year-title" id={`y${year}`}><span id={`year${year}`}></span>{year}<span class="year-line"></span></h2>
-    <ul class="post-list">{posts.filter((post) => post.year === year).map((post) => <li class="post-row" data-categories={post.categories.join(' ')}>
+    <ul class="post-list">{posts.filter((post) => post.year === year).map((post) => <li class="post-row">
       <time datetime={post.date}>{post.date.slice(5).replace('-', '.')}</time>
       <a href={post.url}>{post.title}</a>
     </li>)}</ul>
   </section>)}
-  <p class="archive-end">写下来的，都会留下。</p>
 </div>
-<script>
-  document.querySelectorAll<HTMLElement>('[data-archive]').forEach((archive) => {
-    const buttons = archive.querySelectorAll<HTMLButtonElement>('[data-filter]');
-    buttons.forEach((button) => button.addEventListener('click', () => {
-      const filter = button.dataset.filter;
-      buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
-      let count = 0;
-      archive.querySelectorAll<HTMLElement>('.post-row').forEach((row) => {
-        const visible = filter === 'all' || row.dataset.categories?.split(' ').includes(filter || '');
-        row.hidden = !visible; if (visible) count++;
-      });
-      archive.querySelectorAll<HTMLElement>('.year-section').forEach((section) => {
-        section.hidden = ![...section.querySelectorAll<HTMLElement>('.post-row')].some((row) => !row.hidden);
-        const id = section.querySelector('h2')?.id;
-        const link = archive.querySelector<HTMLAnchorElement>(`.year-nav a[href="#${id}"]`);
-        if (link) link.hidden = section.hidden;
-      });
-      const label = archive.querySelector('[data-count]'); if (label) label.textContent = `${count} 篇`;
-    }));
-  });
-</script>

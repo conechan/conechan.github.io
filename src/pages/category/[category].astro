@@ -6,4 +6,4 @@ export function getStaticPaths() { return categories.map((category) => ({ params
 const { category } = Astro.props;
 const filtered = posts.filter((post) => post.categories.includes(category));
 ---
-<Site title={categoryLabel(category)}><div class="page-heading"><a class="back-link" href="/">返回随笔</a><h1>{categoryLabel(category)}</h1><p>{filtered.length} 篇文章</p></div><Archive posts={filtered} showFilters={false} /></Site>
+<Site title={categoryLabel(category)}><div class="page-heading"><a class="back-link" href="/">返回</a><h1>{categoryLabel(category)}</h1><p>{filtered.length} 篇文章</p></div><Archive posts={filtered} /></Site>

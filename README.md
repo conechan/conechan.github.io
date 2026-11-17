@@ -53,6 +53,10 @@ npm run build
 - 根目录：仓库根目录
 - 无需 Astro Cloudflare 服务端适配器，也不需要 API Key。
 
+GitHub Pages 的发布来源已切换为 GitHub Actions，仓库未配置 Pages 发布工作流，因此不再自动运行旧 Jekyll 构建。网站由 Cloudflare Pages 的 GitHub 集成发布。
+
+Cloudflare 账户中的 Bulk Redirects 列表 `cone_canonical_redirects` 和规则 `Redirect blog aliases to cone.cc` 将 `www.cone.cc`、`conechan.pages.dev` 以 301 永久跳转到 `https://cone.cc`，保留文章路径和查询参数。这些跳转由 Cloudflare 账户配置管理，不在 Astro 构建产物中。
+
 提交到生产分支会由 Pages 的 GitHub 集成自动构建。备用手动部署方式：
 
 ```sh

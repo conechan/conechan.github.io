@@ -2,7 +2,6 @@ import { readdirSync, readFileSync } from 'node:fs';
 import matter from 'gray-matter';
 import MarkdownIt from 'markdown-it';
 import anchor from 'markdown-it-anchor';
-import { bundledLanguages, bundledLanguagesAlias, createHighlighter } from 'shiki';
 
 // Astro bundles this module into dist/.prerender; source paths stay project-relative.
 const root = process.cwd();
@@ -27,22 +26,24 @@ export function normalizeLegacyMarkdown(content) {
     .replace(/{%\s*endhighlight\s*%}/g, '\n```\n');
 }
 
-const languageAliases = { nasm: 'asm', console: 'shell' };
-const resolveLanguage = (language) => languageAliases[language] || language;
-const languageScanner = new MarkdownIt({ html: true });
-const languages = new Set(['text']);
-for (const { content } of postSources) {
-  for (const token of languageScanner.parse(normalizeLegacyMarkdown(content), {})) {
-    if (token.type !== 'fence') continue;
-    const language = resolveLanguage(token.info.trim().split(/\s+/)[0]);
-    if (Object.hasOwn(bundledLanguages, language) || Object.hasOwn(bundledLanguagesAlias, language)) languages.add(language);
-  }
+const md = new MarkdownIt({ html: true, linkify: true, typographer: false })
+  .use(anchor, { slugify: (s) => s.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\p{L}\p{N}_-]/gu, '') });
+
+// Keep Markdown's surrounding HTML intact, including nested lists/quotes, while
+// handing code blocks to Astro's server-rendered, independently hydrated islands.
+for (const type of ['fence', 'code_block']) {
+  const renderCode = md.renderer.rules[type];
+  md.renderer.rules[type] = (tokens, index, options, env, renderer) => {
+    const token = tokens[index];
+    const marker = `${env.codeMarker}${env.codeBlocks.length}-->`;
+    env.codeBlocks.push({
+      marker,
+      html: renderCode(tokens, index, options, env, renderer),
+      part: { type: 'code', code: token.content, language: type === 'fence' ? token.info.trim().split(/\s+/)[0] : '' },
+    });
+    return marker;
+  };
 }
-const highlighter = await createHighlighter({ themes: ['github-light', 'github-dark'], langs: [...languages] });
-const md = new MarkdownIt({ html: true, linkify: true, typographer: false, highlight(code, language) {
-  const lang = resolveLanguage(language);
-  return highlighter.codeToHtml(code, { lang: highlighter.getLoadedLanguages().includes(lang) ? lang : 'text', themes: { light: 'github-light', dark: 'github-dark' } });
-} }).use(anchor, { slugify: (s) => s.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\p{L}\p{N}_-]/gu, '') });
 
 // Photo captions use //YYYY.MM.DD as a separator, not a protocol-relative URL.
 const validateLink = md.validateLink;
@@ -94,14 +95,34 @@ md.inline.ruler.before('emphasis', 'legacy_chinese_strong', (state, silent) => {
 });
 
 export function renderMarkdown(content) {
-  const tokens = md.parse(normalizeLegacyMarkdown(content), {});
+  const normalized = normalizeLegacyMarkdown(content);
+  let codeMarker = '<!--cone-code-block:';
+  while (normalized.includes(codeMarker)) codeMarker += ':';
+  const env = { codeMarker, codeBlocks: [] };
+  const tokens = md.parse(normalized, env);
   const headings = [];
   tokens.forEach((token, index) => {
     if (token.type === 'heading_open' && ['h2', 'h3'].includes(token.tag)) {
       headings.push({ depth: Number(token.tag[1]), slug: token.attrGet('id'), text: tokens[index + 1].content });
     }
   });
-  return { html: md.renderer.render(tokens, md.options, {}), headings };
+  const rendered = md.renderer.render(tokens, md.options, env);
+  const parts = [];
+  let html = '';
+  let cursor = 0;
+  for (const block of env.codeBlocks) {
+    const index = rendered.indexOf(block.marker, cursor);
+    if (index < 0) throw new Error('Missing rendered code block');
+    const before = rendered.slice(cursor, index);
+    if (before) parts.push({ type: 'html', html: before });
+    parts.push(block.part);
+    html += before + block.html;
+    cursor = index + block.marker.length;
+  }
+  const after = rendered.slice(cursor);
+  if (after) parts.push({ type: 'html', html: after });
+  html += after;
+  return { html, headings, parts };
 }
 
 const strip = (s) => s.replace(/<[^>]*>/g, ' ').replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/[`#*_>{}]/g, '').replace(/\s+/g, ' ').trim();
@@ -109,8 +130,8 @@ const strip = (s) => s.replace(/<[^>]*>/g, ' ').replace(/!\[[^\]]*\]\([^)]*\)/g,
 export const posts = postSources.map(({ file, data, content }) => {
   const identity = postIdentity(file);
   const text = strip(normalizeLegacyMarkdown(content));
-  const { html, headings } = renderMarkdown(content);
-  return { ...identity, file, title: md.utils.unescapeAll(String(data.title)), description: strip(String(data.description || text)).slice(0, 126), categories: list(data.categories), html, headings };
+  const { html, headings, parts } = renderMarkdown(content);
+  return { ...identity, file, title: md.utils.unescapeAll(String(data.title)), description: strip(String(data.description || text)).slice(0, 126), categories: list(data.categories), html, headings, parts };
 }).sort((a, b) => b.date.localeCompare(a.date) || a.file.localeCompare(b.file));
 
 export const categories = [...new Set(posts.flatMap((post) => post.categories))].sort((a, b) => {
@@ -118,4 +139,6 @@ export const categories = [...new Set(posts.flatMap((post) => post.categories))]
   return order.indexOf(a) - order.indexOf(b);
 });
 export const formatDate = (date) => date.replaceAll('-', '.');
-export const about = renderMarkdown(matter(readFileSync(`${root}/about.md`, 'utf8')).content).html;
+const aboutContent = renderMarkdown(matter(readFileSync(`${root}/about.md`, 'utf8')).content);
+export const about = aboutContent.html;
+export const aboutParts = aboutContent.parts;

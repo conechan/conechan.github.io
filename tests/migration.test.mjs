@@ -1,6 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { PrismLight } from 'react-syntax-highlighter';
+import { codeLanguage } from '../src/lib/code-languages.mjs';
 import { postIdentity, normalizeLegacyMarkdown, renderMarkdown, posts } from '../src/lib/posts.mjs';
 test('original dated URLs preserve spelling, including historical typos', () => {
   assert.equal(postIdentity('2015-10-20-charest-trivial.md').url, '/2015/10/20/charest-trivial');
@@ -52,11 +56,12 @@ test('legacy bold compatibility leaves code and modern nested emphasis intact', 
   assert(html.includes('<code>**代码：**保持原样</code>'));
   assert.equal((html.match(/<strong>/g) || []).length, 3);
 });
-test('Ruby fences in the GitLab article contain syntax-colored keyword tokens', () => {
+test('Ruby fences are handed to the official code component without altering source', () => {
   const post = posts.find((post) => post.path === '2015/07/15/gitlab-summary');
-  assert(/<span style="[^"]*color:[^"]*">(?:begin|rescue|end)<\/span>/.test(post.html), 'Ruby keywords in the GitLab article must be syntax-colored');
-  const { html } = renderMarkdown('```ruby\ndef greet\n  puts "hello"\nend\n```');
-  assert.match(html, /<span style="[^"]*color:[^"]*">def<\/span>/);
+  assert.equal(post.parts.filter((part) => part.type === 'code' && part.language === 'ruby').length, 3);
+  const code = 'def greet\n  puts "hello"\nend\n';
+  const { parts } = renderMarkdown(`\`\`\`ruby\n${code}\`\`\``);
+  assert.deepEqual(parts, [{ type: 'code', language: 'ruby', code }]);
 });
 test('unknown and unlabeled fence languages still render safely as plain text', () => {
   for (const language of ['', 'unknown-language']) {
@@ -96,5 +101,35 @@ test('lost temporary images are explained and restored posters use local assets'
     assert(assets.includes(asset));
     assert(posts.find((post) => post.file === `${slug}.md`).html.includes(`src="/${asset}"`));
     assert.equal(readFileSync(asset).subarray(0, 2).toString('hex'), 'ffd8');
+  }
+});
+test('code islands preserve surrounding list/quote markup and literal marker comments', () => {
+  const source = '<!--cone-code-block:0-->\n\n> 引用\n>\n> ```js\n> const text = "</script>";\n> ```\n\n- 列表\n\n    ```shell\n    echo "hello"\n    ```';
+  const { html, parts } = renderMarkdown(source);
+  assert(html.includes('<!--cone-code-block:0-->'));
+  assert(html.includes('<blockquote>'));
+  assert(html.includes('<ul>'));
+  assert(!html.includes('<script>'));
+  assert.equal((html.match(/<pre\b/g) || []).length, 2);
+  assert.deepEqual(parts.filter((part) => part.type === 'code'), [
+    { type: 'code', language: 'js', code: 'const text = "</script>";\n' },
+    { type: 'code', language: 'shell', code: 'echo "hello"\n' },
+  ]);
+  assert(parts[0].type === 'html' && parts[0].html.includes('<blockquote>'));
+  assert(parts.at(-1).type === 'html' && parts.at(-1).html.includes('</ul>'));
+});
+test('language aliases and prompt detection use supported SDK/Prism grammars', () => {
+  for (const [input, expected] of Object.entries({ shell: 'bash', console: 'bash', html: 'markup', asm: 'nasm', nasm: 'nasm', apache: 'apacheconf', shellsession: 'shell-session', js: 'javascript', ruby: 'ruby' })) {
+    assert.equal(codeLanguage(input), expected);
+  }
+  assert.equal(codeLanguage('shell', 'root@mkt-git-01:~# service gitlab\n'), 'shell-session');
+  assert.equal(codeLanguage('shell', '# comment\necho hi\n'), 'bash');
+  assert.equal(codeLanguage('unknown-language'), 'text');
+  assert.equal(codeLanguage(), 'text');
+});
+test('legacy assembly, Apache and terminal sessions produce syntax tokens', () => {
+  for (const [language, code] of [['nasm', 'MOV AX, 10H\n'], ['apache', 'AddType application/x-httpd-php .php\n'], ['shellsession', '# ./configure --prefix=/usr/local/mysql\n']]) {
+    const html = renderToStaticMarkup(createElement(PrismLight, { language: codeLanguage(language), useInlineStyles: false }, code));
+    assert(/class="token\b/.test(html), `${language} must retain syntax tokens`);
   }
 });

@@ -1,0 +1,11 @@
+---
+import ArticleCodeBlock from './ArticleCodeBlock';
+import type { MarkdownPart } from '../lib/posts.mjs';
+interface Props { parts: MarkdownPart[] }
+const { parts } = Astro.props;
+---
+<div class="prose">
+  {parts.map((part) => part.type === 'html'
+    ? <Fragment set:html={part.html} />
+    : <ArticleCodeBlock code={part.code} language={part.language} client:visible />)}
+</div>

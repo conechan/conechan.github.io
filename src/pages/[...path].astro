@@ -1,5 +1,6 @@
 ---
 import Site from '../layouts/Site.astro';
+import ArticleBody from '../components/ArticleBody.astro';
 import { posts, formatDate } from '../lib/posts.mjs';
 export function getStaticPaths() { return posts.map((post, index) => ({ params: { path: post.path }, props: { post, previous: posts[index + 1], next: posts[index - 1] } })); }
 const { post, previous, next } = Astro.props;
@@ -12,7 +13,7 @@ const { post, previous, next } = Astro.props;
       <div class="article-meta"><time datetime={post.date}>{formatDate(post.date)}</time></div>
     </header>
     {post.headings.length >= 4 && <details class="article-toc"><summary>文章目录</summary><nav aria-label="文章目录"><ul>{post.headings.map((heading) => <li class:list={{ nested: heading.depth === 3 }}><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ul></nav></details>}
-    <div class="prose" set:html={post.html} />
+    <ArticleBody parts={post.parts} />
   </article>
   <nav class="post-navigation" aria-label="相邻文章">
     <div>{previous && <a href={previous.url}><span>上一篇</span>{previous.title}</a>}</div>

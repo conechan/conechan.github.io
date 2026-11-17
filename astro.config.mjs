@@ -31,8 +31,9 @@ export default defineConfig({
     // Apps SDK UI publishes extensionless ESM imports. Let Vite resolve them
     // while prerendering rather than asking Node's stricter ESM resolver.
     environments: {
-      ssr: { resolve: { noExternal: ['@openai/apps-sdk-ui'] } },
-      prerender: { resolve: { noExternal: ['@openai/apps-sdk-ui'] } },
+      // Keep Babel's CommonJS helpers external in the development SSR runtime.
+      ssr: { resolve: { noExternal: ['@openai/apps-sdk-ui', 'react-syntax-highlighter'], external: ['@babel/runtime'] } },
+      prerender: { resolve: { noExternal: ['@openai/apps-sdk-ui', 'react-syntax-highlighter'] } },
     },
   },
   build: { format: 'directory' },

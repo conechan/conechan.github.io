@@ -5,6 +5,7 @@ Web; static personal blog deployed through Cloudflare Pages at https://cone.cc. 
 
 ## Stack
 Astro, React islands, Apps SDK UI and Tailwind CSS. User explicitly requested this migration and deployment.
+Article code uses the official Apps SDK UI CodeBlock composition with syntax highlighting and an accessible Chinese copy button. Code is statically rendered; copy interaction hydrates on visibility. Existing dependency versions remain pinned.
 
 ## Product purpose
 Read and browse the existing Chinese articles in a single chronological list. Preserve the author's identity, article contents, images, historical messages stored in the article bodies, and dated URLs. Legacy archive, about and category routes remain available for compatibility.

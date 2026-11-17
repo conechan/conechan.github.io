@@ -75,9 +75,9 @@ button:disabled { cursor: wait; }
 .prose h4 { font-size: 18px; }
 .prose a { color: var(--link); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--link) 40%, transparent); }
 .prose img { display: block; max-width: 100%; height: auto; margin: 24px auto; border-radius: 4px; }
-/* Override Shiki's inline background while keeping its syntax token colors. */
-.prose pre { background-color: var(--soft) !important; max-width: 100%; overflow-x: auto; padding: 20px; border-radius: 10px; font-size: 13px; line-height: 1.7; margin: 24px 0 32px; tab-size: 2; }
-.prose pre code { background: transparent; padding: 0; border-radius: 0; font-size: inherit; }
+.article-code-block { min-width: 0; margin: 24px 0 32px; }
+.article-code-copy { position: absolute; top: 0; right: 0; padding: 10px 10px 0 0; border-radius: inherit; background-color: var(--codeblock-background-color); }
+astro-island[ssr] .article-code-copy { visibility: hidden; }
 .prose :not(pre) > code { font-size: .86em; padding: 3px 5px; background: var(--soft); border-radius: 4px; }
 .prose code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 .prose ul, .prose ol { padding-left: 1.5em; margin-bottom: 1.5em; }
@@ -88,7 +88,6 @@ button:disabled { cursor: wait; }
 .prose hr { border: none; height: 1px; background: var(--line); margin: 36px 0; }
 .prose table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
 .prose th, .prose td { border: 1px solid var(--line); padding: 8px 12px; }
-[data-theme="dark"] .shiki, [data-theme="dark"] .shiki span { color: var(--shiki-dark) !important; }
 .post-navigation { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 32px; font-size: 14px; line-height: 1.7; }
 .post-navigation div:last-child { text-align: right; }
 .post-navigation span { display: block; color: var(--muted); font-size: 12px; margin-bottom: 7px; }
@@ -116,6 +115,5 @@ button:disabled { cursor: wait; }
   .post-row a { font-size: 15px; }
   .post-row time { font-size: 11px; }
   .prose { font-size: 16px; line-height: 1.95; }
-  .prose pre { padding: 16px; font-size: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }

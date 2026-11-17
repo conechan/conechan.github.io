@@ -1,6 +1,5 @@
 ---
 import Site from '../layouts/Site.astro';
-import Comments from '../components/Comments.astro';
 import { about } from '../lib/posts.mjs';
 ---
-<Site title="关于我"><article><header class="page-heading about-heading"><img src="/img/site_avatar.jpg" alt="cone 的头像" width="64" height="64" /><h1>关于我</h1></header><div class="prose" set:html={about} /></article><Comments path="/about/" title="关于我" /></Site>
+<Site title="关于我"><article><header class="page-heading about-heading"><img src="/img/site_avatar.jpg" alt="cone 的头像" width="64" height="64" /><h1>关于我</h1></header><div class="prose" set:html={about} /></article></Site>

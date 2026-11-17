@@ -30,7 +30,7 @@ npm run preview
 - 兼容 Markdown 内嵌 HTML 以及 Jekyll `{% highlight %}` 代码块。
 - 原 Jekyll 模板和配置保留作历史参考，Astro 只从 `src/` 生成页面。
 - 远端图片保留原始地址，其可用性由原图片托管方决定。
-- 原 Disqus 评论按需加载，沿用 `conecc` 和原 `http://cone.cc` 文章 URL 关联线程；实际历史评论匹配需在线核对。
+- 网站不加载评论系统；原文章正文中已经保存的历史留言继续保留。
 
 ## 校验
 

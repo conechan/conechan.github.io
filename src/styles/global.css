@@ -91,9 +91,6 @@ button:disabled { cursor: wait; }
 .post-navigation { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 32px; font-size: 14px; line-height: 1.7; }
 .post-navigation div:last-child { text-align: right; }
 .post-navigation span { display: block; color: var(--muted); font-size: 12px; margin-bottom: 7px; }
-.comments { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); }
-.comments-toggle { color: var(--muted); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; background: var(--page); font-size: 13px; }
-.comments > p { color: var(--muted); font-size: 12px; margin-top: 10px; }
 .about-heading img { border-radius: 50%; margin-bottom: 24px; }
 .site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); margin-top: 64px; padding: 24px 0 40px; color: var(--muted); font-size: 12px; }
 .site-footer > div { display: flex; gap: 12px; }

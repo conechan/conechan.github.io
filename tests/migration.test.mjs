@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { postIdentity, normalizeLegacyMarkdown, renderMarkdown, posts } from '../src/lib/posts.mjs';
 test('original dated URLs preserve spelling, including historical typos', () => {
   assert.equal(postIdentity('2015-10-20-charest-trivial.md').url, '/2015/10/20/charest-trivial');
@@ -72,5 +73,28 @@ test('photo caption dates stay plain text while real URLs remain linked', () => 
   assert(html.includes('照片 //2012.06.27'));
   for (const url of ['https://example.com', '//example.com/photo', '//192.168.1.1/photo']) {
     assert(html.includes(`href="${url}"`), `Real URL must remain linked: ${url}`);
+  }
+});
+test('legacy article aliases redirect to existing article routes', () => {
+  const urls = new Set(posts.map((post) => post.url));
+  const redirects = readFileSync('public/_redirects', 'utf8').trim().split('\n');
+  assert.equal(redirects.length, 4);
+  for (const line of redirects) {
+    const [source, target, status] = line.trim().split(/\s+/);
+    assert.equal(status, '301');
+    assert(urls.has(target), `Redirect destination must exist: ${target}`);
+    for (const post of posts) assert(!post.html.includes(`href="${source}"`), `Update legacy article link in ${post.file}`);
+  }
+});
+test('lost temporary images are explained and restored posters use local assets', () => {
+  const thanksgiving = posts.find((post) => post.file === '2006-11-23-thanksgiving.md');
+  assert(thanksgiving.html.includes('原始文件未能找回'));
+  assert(!thanksgiving.html.includes('file:///'));
+  const assets = JSON.parse(readFileSync('scripts/assets.json', 'utf8'));
+  for (const slug of ['2010-08-18-kj-music-life', '2009-10-18-king', '2009-08-10-home']) {
+    const asset = `img/post/${slug}/poster.jpg`;
+    assert(assets.includes(asset));
+    assert(posts.find((post) => post.file === `${slug}.md`).html.includes(`src="/${asset}"`));
+    assert.equal(readFileSync(asset).subarray(0, 2).toString('hex'), 'ffd8');
   }
 });

@@ -6,7 +6,7 @@ categories: Old
 tags: Old
 ---
 
-![音乐人生](http://img3.douban.com/lpic/s3692634.jpg)
+![音乐人生](/img/post/2010-08-18-kj-music-life/poster.jpg)
 
 [http://movie.douban.com/subject/3394878/](http://movie.douban.com/subject/3394878/)
 

@@ -15,7 +15,9 @@ tags: Old
 
 ......
 
-![](file:///C:/DOCUME%7E1/cone/LOCALS%7E1/Temp/moz-screenshot.jpg)![](file:///C:/DOCUME%7E1/cone/LOCALS%7E1/Temp/moz-screenshot-1.jpg)![](file:///C:/DOCUME%7E1/cone/LOCALS%7E1/Temp/moz-screenshot-2.jpg)![](file:///C:/DOCUME%7E1/cone/LOCALS%7E1/Temp/moz-screenshot-3.jpg)![](file:///C:/DOCUME%7E1/cone/LOCALS%7E1/Temp/moz-screenshot-4.jpg)![](file:///C:/DOCUME%7E1/cone/LOCALS%7E1/Temp/moz-screenshot-5.jpg)![](file:///C:/DOCUME%7E1/cone/LOCALS%7E1/Temp/moz-screenshot-6.jpg)其实郁闷不在于事情，只是人对待事情的态度而已。
+> 原文中的 7 张图片来自旧电脑的临时目录，原始文件未能找回。
+
+其实郁闷不在于事情，只是人对待事情的态度而已。
 
 我也许该去感感恩，来改善下我生活态度了......
 

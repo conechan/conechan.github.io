@@ -13,7 +13,7 @@ tags: Old
 >
 > 在网络里无意中搜索到你的文章，感怀于时光流逝中，自己曾经在你的进步中竟然也有一点点的痕迹，所以在我的两个站里转载你这文章，也算是纪念我的电台生涯里，朋友们的一些留念话语。谢谢你这么念旧，有机会联系吧。
 转载地址：  
-[http://www.qpg901.com](http://www.qpg901.com)  
+[http://www.qpg901.com](https://web.archive.org/web/20061205044251/http://qpg901.com:80/ "原网页存档")（网页存档）\
 [http://www.dj901.com](http://www.dj901.com)
 
 
@@ -21,7 +21,7 @@ tags: Old
 
 碧云姐姐的留言这么煽情，搞到我都不太好意思了。我都很久很久没听过电台咯，得闲一定再捧下碧云姐姐的场。
 
-[《与designer擦肩》原文](/2006/07/23/Bypass-Designer/)
+[《与designer擦肩》原文](/2006/07/23/bypass-designer)
 
 This entry was posted on Sunday, February 25th, 2007 at 2:41 am.
 

@@ -25,9 +25,9 @@ LFS特别适合那些有过很肤浅的Linux操作经验，然而又很想深入
 
 LFS的官方网站：[http://www.linuxfromscratch.org/](http://www.linuxfromscratch.org/)
 
-Linuxsir讨论区（有中文教程）：[http://www.linuxsir.org/bbs/forumdisplay.php?f=58](http://www.linuxsir.org/bbs/forumdisplay.php?f=58)
+Linuxsir讨论区（有中文教程）：[http://www.linuxsir.org/bbs/forumdisplay.php?f=58](https://web.archive.org/web/20060711233655/http://www.linuxsir.org:80/bbs/forumdisplay.php?f=58 "原网页存档")（网页存档）
 
-LFS中文用户组：[http://lfs.linuxsir.org/main/?q=node&from=110](http://lfs.linuxsir.org/main/?q=node&from=110)
+LFS中文用户组：[http://lfs.linuxsir.org/main/?q=node&from=110](https://web.archive.org/web/20070823110049/http://lfs.linuxsir.org/main/?q=node&from=110 "原网页存档")（网页存档）
 
 This entry was posted on Sunday, July 30th, 2006 at 1:43 am.
 

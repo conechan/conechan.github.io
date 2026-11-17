@@ -22,7 +22,7 @@ function watchArticleSources() {
   };
 }
 export default defineConfig({
-  site: 'https://conechan.pages.dev',
+  site: 'https://cone.cc',
   output: 'static',
   trailingSlash: 'ignore',
   integrations: [react()],

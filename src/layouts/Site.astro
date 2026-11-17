@@ -17,7 +17,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="alternate" type="application/atom+xml" title="cone.cc" href="/atom.xml" />
+    <link rel="alternate" type="application/atom+xml" title="cone.cc" href={new URL('/atom.xml', Astro.site)} />
     <meta property="og:title" content={title || 'cone.cc'} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={article ? 'article' : 'website'} />

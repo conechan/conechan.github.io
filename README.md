@@ -45,7 +45,7 @@ npm run build
 ## Cloudflare Pages
 
 - 仓库：`conechan/conechan.github.io`
-- 项目：`conechan`，地址：`https://conechan.pages.dev`
+- 项目：`conechan`，正式地址：`https://cone.cc`，Pages 地址：`https://conechan.pages.dev`
 - 生产分支：`master`
 - 框架：Astro
 - 构建命令：`npm run build`
@@ -60,4 +60,4 @@ npm run build
 npx wrangler pages deploy dist --project-name conechan
 ```
 
-站点 URL 在 `astro.config.mjs` 中设置。将来切换正式域名时，需要同步修改 `site`，以更新 canonical、站点地图、robots 和订阅链接。仓库中的旧 `CNAME` 不用于配置 Cloudflare Pages；本次迁移不修改 cone.cc 的 DNS。
+站点 URL 在 `astro.config.mjs` 中设置为 `https://cone.cc`，用于生成 canonical、站点地图、robots 和订阅链接。Atom 保留历史条目 ID，避免已有阅读器重复收录。自定义域名需在 Cloudflare Pages 中绑定；仓库中的旧 `CNAME` 不用于配置 Cloudflare Pages。

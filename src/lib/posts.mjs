@@ -6,8 +6,11 @@ import { bundledLanguages, bundledLanguagesAlias, createHighlighter } from 'shik
 
 // Astro bundles this module into dist/.prerender; source paths stay project-relative.
 const root = process.cwd();
-const postFiles = readdirSync(`${root}/_posts`).filter((file) => file.endsWith('.md'));
-export const categoryNames = { Tech: '技术', Travel: '旅行', Music: '音乐', Life: '生活', Old: '旧时光' };
+const postSources = readdirSync(`${root}/_posts`).filter((file) => file.endsWith('.md')).map((file) => {
+  const { data, content } = matter(readFileSync(`${root}/_posts/${file}`, 'utf8'));
+  return { file, data, content };
+});
+const categoryNames = { Tech: '技术', Travel: '旅行', Music: '音乐', Life: '生活', Old: '旧时光' };
 export const categoryLabel = (name) => categoryNames[name] || name;
 const list = (value) => Array.isArray(value) ? value.map(String) : String(value || '').split(/\s+/).filter(Boolean);
 
@@ -28,8 +31,7 @@ const languageAliases = { nasm: 'asm', console: 'shell' };
 const resolveLanguage = (language) => languageAliases[language] || language;
 const languageScanner = new MarkdownIt({ html: true });
 const languages = new Set(['text']);
-for (const file of postFiles) {
-  const { content } = matter(readFileSync(`${root}/_posts/${file}`, 'utf8'));
+for (const { content } of postSources) {
   for (const token of languageScanner.parse(normalizeLegacyMarkdown(content), {})) {
     if (token.type !== 'fence') continue;
     const language = resolveLanguage(token.info.trim().split(/\s+/)[0]);
@@ -104,13 +106,11 @@ export function renderMarkdown(content) {
 
 const strip = (s) => s.replace(/<[^>]*>/g, ' ').replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/[`#*_>{}]/g, '').replace(/\s+/g, ' ').trim();
 
-export const posts = postFiles.map((file) => {
-  const raw = readFileSync(`${root}/_posts/${file}`, 'utf8');
-  const { data, content } = matter(raw);
+export const posts = postSources.map(({ file, data, content }) => {
   const identity = postIdentity(file);
   const text = strip(normalizeLegacyMarkdown(content));
   const { html, headings } = renderMarkdown(content);
-  return { ...identity, file, title: md.utils.unescapeAll(String(data.title)), description: strip(String(data.description || text)).slice(0, 126), categories: list(data.categories), tags: list(data.tags), html, headings };
+  return { ...identity, file, title: md.utils.unescapeAll(String(data.title)), description: strip(String(data.description || text)).slice(0, 126), categories: list(data.categories), html, headings };
 }).sort((a, b) => b.date.localeCompare(a.date) || a.file.localeCompare(b.file));
 
 export const categories = [...new Set(posts.flatMap((post) => post.categories))].sort((a, b) => {

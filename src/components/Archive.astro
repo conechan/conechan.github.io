@@ -1,5 +1,5 @@
 ---
-interface Post { year: string; date: string; url: string; title: string; categories: string[] }
+import type { Post } from '../lib/posts.mjs';
 interface Props { posts: Post[] }
 const { posts } = Astro.props;
 const years = [...new Set(posts.map((post) => post.year))];

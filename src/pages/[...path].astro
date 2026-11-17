@@ -5,16 +5,16 @@ export function getStaticPaths() { return posts.map((post, index) => ({ params: 
 const { post, previous, next } = Astro.props;
 ---
 <Site title={post.title} description={post.description} article>
-  <article data-pagefind-body>
+  <article>
     <header class="article-heading">
-      <a class="back-link" href={`/#y${post.year}`} data-pagefind-ignore>返回</a>
-      <h1 data-pagefind-meta="title">{post.title}</h1>
+      <a class="back-link" href={`/#y${post.year}`}>返回</a>
+      <h1>{post.title}</h1>
       <div class="article-meta"><time datetime={post.date}>{formatDate(post.date)}</time></div>
     </header>
-    {post.headings.length >= 4 && <details class="article-toc" data-pagefind-ignore><summary>文章目录</summary><nav aria-label="文章目录"><ul>{post.headings.map((heading) => <li class:list={{ nested: heading.depth === 3 }}><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ul></nav></details>}
+    {post.headings.length >= 4 && <details class="article-toc"><summary>文章目录</summary><nav aria-label="文章目录"><ul>{post.headings.map((heading) => <li class:list={{ nested: heading.depth === 3 }}><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ul></nav></details>}
     <div class="prose" set:html={post.html} />
   </article>
-  <nav class="post-navigation" aria-label="相邻文章" data-pagefind-ignore>
+  <nav class="post-navigation" aria-label="相邻文章">
     <div>{previous && <a href={previous.url}><span>上一篇</span>{previous.title}</a>}</div>
     <div>{next && <a href={next.url}><span>下一篇</span>{next.title}</a>}</div>
   </nav>

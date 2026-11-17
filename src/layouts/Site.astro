@@ -33,12 +33,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <body>
     <a href="#main" class="skip-link">跳到正文</a>
     <div class="site-shell">
-      <header class="site-header" data-pagefind-ignore>
+      <header class="site-header">
         <a class="wordmark" href="/" aria-label="cone.cc 首页">cone<span>.cc</span></a>
         <SiteTools client:load />
       </header>
       <main id="main" tabindex="-1"><slot /></main>
-      <footer class="site-footer" data-pagefind-ignore>
+      <footer class="site-footer">
         <span>© {new Date().getUTCFullYear()} cone.cc</span>
         <div><a href="#top" data-back-top>回到顶部</a></div>
       </footer>

@@ -1,8 +1,0 @@
-permalink: /:year/:month/:day/:title
-url: cone.cc
-title: cone.cc
-highlighter: pygments
-author: cone
-email: conechan@gmail.com
-markdown: redcarpet
-excerpt_separator: ""

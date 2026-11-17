@@ -2,7 +2,7 @@ export interface Heading { depth: number; slug: string; text: string }
 export interface Post {
   year: string; date: string; path: string; url: string; file: string;
   title: string; description: string; categories: string[]; tags: string[];
-  minutes: number; html: string; headings: Heading[];
+  html: string; headings: Heading[];
 }
 export const posts: Post[];
 export const categories: string[];

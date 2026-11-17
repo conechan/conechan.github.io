@@ -28,7 +28,7 @@ npm run preview
 - `img/` 保持原位置。构建脚本只复制 `scripts/assets.json` 列出的公开资源；添加新公开图片时同步更新该清单。被 Git 忽略的本地简历图片不会发布。
 - 保留 `/archive/`、`/about/`、`/atom.xml`、`/favicon.ico` 和 `/img/...`。
 - 兼容 Markdown 内嵌 HTML 以及 Jekyll `{% highlight %}` 代码块。
-- 原 Jekyll 模板和配置保留作历史参考，Astro 只从 `src/` 生成页面。
+- Astro 从 `src/` 生成页面；已退役的 Jekyll 模板、旧脚本及样式可在 Git 历史中找回。
 - 远端图片保留原始地址，其可用性由原图片托管方决定。
 - 网站不加载评论系统；原文章正文中已经保存的历史留言继续保留。
 
@@ -41,6 +41,8 @@ npm run build
 ```
 
 构建后自动校验全部原文章路由、公开资源字节一致性、Atom和 404 页面。
+
+GitHub Actions 的 `Validate site` 工作流会在推送到 `master` 或提交面向 `master` 的 Pull Request 时，使用 `.node-version` 指定的 Node.js 执行 `npm ci`、类型检查、测试及构建；也支持手动运行。工作流仅负责校验，部署仍由 Cloudflare Pages 的 GitHub 集成触发。
 
 ## Cloudflare Pages
 
@@ -64,4 +66,4 @@ npm run build
 npx wrangler pages deploy dist --project-name conechan
 ```
 
-站点 URL 在 `astro.config.mjs` 中设置为 `https://cone.cc`，用于生成 canonical、站点地图、robots 和订阅链接。Atom 保留历史条目 ID，避免已有阅读器重复收录。自定义域名需在 Cloudflare Pages 中绑定；仓库中的旧 `CNAME` 不用于配置 Cloudflare Pages。
+站点 URL 在 `astro.config.mjs` 中设置为 `https://cone.cc`，用于生成 canonical、站点地图、robots 和订阅链接。Atom 保留历史条目 ID，避免已有阅读器重复收录。自定义域名在 Cloudflare Pages 中绑定并管理。

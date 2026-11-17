@@ -110,7 +110,7 @@ export const posts = postFiles.map((file) => {
   const identity = postIdentity(file);
   const text = strip(normalizeLegacyMarkdown(content));
   const { html, headings } = renderMarkdown(content);
-  return { ...identity, file, title: md.utils.unescapeAll(String(data.title)), description: strip(String(data.description || text)).slice(0, 126), categories: list(data.categories), tags: list(data.tags), minutes: Math.max(1, Math.ceil(text.length / 450)), html, headings };
+  return { ...identity, file, title: md.utils.unescapeAll(String(data.title)), description: strip(String(data.description || text)).slice(0, 126), categories: list(data.categories), tags: list(data.tags), html, headings };
 }).sort((a, b) => b.date.localeCompare(a.date) || a.file.localeCompare(b.file));
 
 export const categories = [...new Set(posts.flatMap((post) => post.categories))].sort((a, b) => {

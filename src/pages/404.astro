@@ -1,4 +1,5 @@
 ---
 import Site from '../layouts/Site.astro';
+import NotFound from '../components/NotFound';
 ---
-<Site title="页面未找到" noindex><div class="not-found"><p class="error-code">404</p><h1>这一页没有找到</h1><p>链接可能有误，可以回到随笔列表查找文章。</p><a class="text-link" href="/">返回</a></div></Site>
+<Site title="页面未找到" noindex><NotFound /></Site>

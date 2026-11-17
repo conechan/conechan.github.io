@@ -1,6 +1,7 @@
 ---
 import Site from '../layouts/Site.astro';
 import ArticleBody from '../components/ArticleBody.astro';
+import { BackLink, AdjacentPostLink } from '../components/NavigationLinks';
 import { posts, formatDate } from '../lib/posts.mjs';
 export function getStaticPaths() { return posts.map((post, index) => ({ params: { path: post.path }, props: { post, previous: posts[index + 1], next: posts[index - 1] } })); }
 const { post, previous, next } = Astro.props;
@@ -8,7 +9,7 @@ const { post, previous, next } = Astro.props;
 <Site title={post.title} description={post.description} article>
   <article>
     <header class="article-heading">
-      <a class="back-link" href={`/#y${post.year}`}>返回</a>
+      <BackLink href={`/#y${post.year}`} />
       <h1>{post.title}</h1>
       <div class="article-meta"><time datetime={post.date}>{formatDate(post.date)}</time></div>
     </header>
@@ -16,7 +17,7 @@ const { post, previous, next } = Astro.props;
     <ArticleBody parts={post.parts} />
   </article>
   <nav class="post-navigation" aria-label="相邻文章">
-    <div>{previous && <a href={previous.url}><span>上一篇</span>{previous.title}</a>}</div>
-    <div>{next && <a href={next.url}><span>下一篇</span>{next.title}</a>}</div>
+    <div>{previous && <AdjacentPostLink href={previous.url} label="上一篇" title={previous.title} />}</div>
+    <div>{next && <AdjacentPostLink href={next.url} label="下一篇" title={next.title} />}</div>
   </nav>
 </Site>

@@ -1,5 +1,6 @@
 ---
 import SiteTools from '../components/SiteTools';
+import { BackToTopLink } from '../components/NavigationLinks';
 import '../styles/global.css';
 interface Props { title?: string; description?: string; article?: boolean; noindex?: boolean }
 const { title, description = 'cone.cc · 随笔、技术、旅行与音乐。', article = false, noindex = false } = Astro.props;
@@ -30,7 +31,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       } catch { document.documentElement.dataset.theme = 'light'; }
     </script>
   </head>
-  <body>
+  <body id="top">
     <a href="#main" class="skip-link">跳到正文</a>
     <div class="site-shell">
       <header class="site-header">
@@ -40,7 +41,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       <main id="main" tabindex="-1"><slot /></main>
       <footer class="site-footer">
         <span>© {new Date().getUTCFullYear()} cone.cc</span>
-        <div><a href="#top" data-back-top>回到顶部</a></div>
+        <div><BackToTopLink /></div>
       </footer>
     </div>
     <script>

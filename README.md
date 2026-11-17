@@ -2,6 +2,7 @@
 
 个人博客。使用 Astro 静态生成，React + Apps SDK UI 提供主题切换和文章代码块。
 首页参考 maintao.com，采用单栏、按年分组的完整文章列表。
+返回、相邻文章和回到顶部使用官方 `TextLink`；404 页面使用 `EmptyMessage` 和 `ButtonLink`。这些导航和提示组件仅静态渲染，无需客户端 React 即可使用。
 
 ## 本地开发
 
